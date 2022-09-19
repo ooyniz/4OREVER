@@ -30,7 +30,7 @@
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
  <tr>
-    <td align="center"><a href=https://github.com/NoTaeGwon><img src="https://avatars.githubusercontent.com/u/103228982?v=4" width="100px;" alt=""/><br /><sub><b>Kim JeongSu</b></sub>🏠</a></td>  
+    <td align="center"><a href=https://github.com/NoTaeGwon><img src="https://avatars.githubusercontent.com/u/103228982?v=4" width="100px;" alt=""/><br /><sub><b>No TaeGwon</b></sub>🏠</a></td>  
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
 </table>
