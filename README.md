@@ -22,7 +22,7 @@
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
   <tr>
-    <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gutae</b></sub>🏠</a></td>  
+    <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gyutae</b></sub>🏠</a></td>  
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
   <tr>
