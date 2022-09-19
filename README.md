@@ -22,10 +22,6 @@
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
   <tr>
-    <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gyutae</b></sub>🏠</a></td>  
-    <td> 여기에 자기소개 글을 적어주세요.</td>
-  </tr>
-  <tr>
     <td align="center"><a href=https://github.com/YJU-KimJeongSu><img src="https://avatars.githubusercontent.com/u/103088862?v=4" width="100px;" alt=""/><br /><sub><b>Kim JeongSu</b></sub>🏠</a></td>  
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
@@ -33,6 +29,11 @@
     <td align="center"><a href=https://github.com/NoTaeGwon><img src="https://avatars.githubusercontent.com/u/103228982?v=4" width="100px;" alt=""/><br /><sub><b>No TaeGwon</b></sub>🏠</a></td>  
     <td> 여기에 자기소개 글을 적어주세요.</td>
   </tr>
+  <tr>
+    <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gyutae</b></sub>🏠</a></td>  
+    <td> 여기에 자기소개 글을 적어주세요.</td>
+  </tr>
+
 </table>
 
 <br>
@@ -65,17 +66,18 @@
 
 
 ## 🎤 자유 의견
+### 👑🧔🏻‍♀️ (인성)
+
 ### 👧🏻 (유진)
-
-### 🧔🏻‍♀️ (인성)
-
-### 👨🏻‍🦱(태권)
 
 ### 👦🏻(정수)
 
-### 🧒🏻(규태)
+### 👨🏻‍🦱(태권)
 
 ### 🧑🏻(성혁)
+
+### 🧒🏻(규태)
+
 
 <br>
 
