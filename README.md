@@ -41,7 +41,7 @@
     <td align="center"><a href=https://github.com/NoTaeGwon><img src="https://avatars.githubusercontent.com/u/103228982?v=4" width="100px;" alt=""/><br /><sub><b>No TaeGwon</b></sub>🏠</a></td>  
     <td> 
     열정이 넘치는 개발자가 되고 싶은 노태권입니다. <br>
-    시작이 반이라고 생각해서 한번 해보자 라는 마음을 항상 새기고 있습니다. <br>
+    시작이 반이라고 생각해서 한 번 해보자 라는 마음을 항상 새기고 있습니다. <br>
     </td>
   </tr>
   <tr>
@@ -66,18 +66,20 @@
 
 ## 💡 팀워크 향상 계획
 ### 1️⃣ 술
-![image](https://user-images.githubusercontent.com/102000749/191246617-90782db2-11c3-4583-8a52-d8ec71e79c4f.png) <br> `내용`
+![image](https://user-images.githubusercontent.com/102000749/191246617-90782db2-11c3-4583-8a52-d8ec71e79c4f.png) <br>
 ### 2️⃣ 운동
-![image](https://user-images.githubusercontent.com/102000749/191247141-678deae8-5fb0-49fa-8edc-ab4ec92fa6f4.png) <br> `내용`
+![image](https://user-images.githubusercontent.com/102000749/191247141-678deae8-5fb0-49fa-8edc-ab4ec92fa6f4.png) <br>
 ### 3️⃣ 주기적인 피드백
-![image](https://user-images.githubusercontent.com/102000749/191247626-4a2f13b5-6a12-4ec1-9080-483eec3a03ab.png) <br> `내용`
+![image](https://user-images.githubusercontent.com/102000749/191247626-4a2f13b5-6a12-4ec1-9080-483eec3a03ab.png) <br>
 ### 4️⃣ 과제 협업
-![image](https://user-images.githubusercontent.com/102000749/191247835-8a9ab170-380c-4a55-9acd-4d0353f5ded9.png) <br> `내용`
+![image](https://user-images.githubusercontent.com/102000749/191247835-8a9ab170-380c-4a55-9acd-4d0353f5ded9.png) <br>
 
 <br>
 
 
 ## 🚩 향후 활동 계획
+브레인스토밍 방식의 아이디어 도출
+
 
 <br>
 
