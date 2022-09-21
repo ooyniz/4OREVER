@@ -1,7 +1,7 @@
 # 📢 조별활동계획서 
 
 ## WD2A 4조 4OREVER
-### 🐾 영원함을 뜻하는 FOREVER 처럼, 4조 원들이 영원히 함께 하자는 뜻을 담아 이름 짓게 되었습니다.
+### 🐾 영원함을 뜻하는 FOREVER 처럼, 4조원들이 영원히 함께 하자는 뜻을 담아 이름 짓게 되었습니다.
 
 
 
@@ -17,7 +17,7 @@
   <tr>
     <td align="center"><a href=https://github.com/tkdrms4585><img src="https://avatars.githubusercontent.com/u/76689529?v=4" width="100px;" alt=""/><br /><sub><b>Wang Inseong</b></sub>🏠</a></td>
     <td>
-    풀스택을 꿈꾸는 28살 왕인성입니다. <br> 
+    풀스택 개발자를 꿈꾸는 28살 왕인성입니다. <br> 
     풀기 힘든 문제를 해결하는 순간을 즐길 수 있는 개발자가 되고 싶습니다. <br>
     Java와 C++을 기반으로 알고리즘을 공부하고 있습니다.<br>
     </td>
@@ -50,14 +50,14 @@
     <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gyutae</b></sub>🏠</a></td>  
     <td> 
     은은한 관종 24살 조규태입니다. <br>
-    조원과의 화합으로 최고의 결과를 만들고픈 친화성 갑 개발자가 희망입니다.  <br>
+    조원과의 화합으로 최고의 결과를 만들고픈 친화성 갑 개발자가 되고 싶습니다.  <br>
     항상 밝은 모습으로 팀의 활력소가 되겠습니다! 
     </td>
   </tr>
   <tr>
     <td align="center"><a href=https://github.com/thd8172><img src="https://avatars.githubusercontent.com/u/113906692?v=4" width="100px;" alt=""/><br /><sub><b>Song Sunghyuk</b></sub>🏠</a></td>  
     <td> 
-    안녕하세요. 25살 개발자가 되고싶은 송성혁입니다. <br>
+    안녕하세요. 개발자가 되고싶은 25살 송성혁입니다. <br>
     저는 지금 다른사람들에 비해 많이 부족하여 자바와 c++ 위주로 최대한 공부하고있습니다. <br>
     </td>
   </tr>
