@@ -76,12 +76,12 @@
 ![image](https://user-images.githubusercontent.com/102000749/191247626-4a2f13b5-6a12-4ec1-9080-483eec3a03ab.png) <br>
 ### 4️⃣ 과제 협업
 ![image](https://user-images.githubusercontent.com/102000749/191247835-8a9ab170-380c-4a55-9acd-4d0353f5ded9.png) <br>
-### 5️⃣ 디스코드
-![image](https://user-images.githubusercontent.com/102000749/191387669-3061d4d3-e0c2-40a6-b031-5fa7cf230dd8.png)
-### 6️⃣ 깃허브
-![image](https://user-images.githubusercontent.com/102000749/191387708-512e0b16-5403-4049-98b7-7523ff293e7c.png)
+### 5️⃣ 깃허브
+![image](https://user-images.githubusercontent.com/102000749/191387708-512e0b16-5403-4049-98b7-7523ff293e7c.png) <br>
+### 6️⃣ 디스코드
+![image](https://user-images.githubusercontent.com/102000749/191387669-3061d4d3-e0c2-40a6-b031-5fa7cf230dd8.png) <br>
 ### 7️⃣ 노션
-![image](https://user-images.githubusercontent.com/102000749/191387756-dd4ca184-22c9-4195-a2ca-2a98e8128937.png)
+![image](https://user-images.githubusercontent.com/102000749/191387756-dd4ca184-22c9-4195-a2ca-2a98e8128937.png) <br>
 
 <br>
 
