@@ -49,7 +49,7 @@
   <tr>
     <td align="center"><a href=https://github.com/cchrbxo><img src="https://avatars.githubusercontent.com/u/102796551?v=4" width="100px;" alt=""/><br /><sub><b>Cho Gyutae</b></sub>🏠</a></td>  
     <td> 
-    은은한 관종 24살 조규태입니다. <br>
+    열정이 넘칠 나이 24살 조규태입니다. <br>
     조원과의 화합으로 최고의 결과를 만들고픈 친화성 갑 개발자가 되고 싶습니다.  <br>
     항상 밝은 모습으로 팀의 활력소가 되겠습니다! 
     </td>
@@ -69,19 +69,16 @@
 
 ## 💡 팀워크 향상 계획
 ### 1️⃣ 회식
-![image](https://user-images.githubusercontent.com/102000749/191246617-90782db2-11c3-4583-8a52-d8ec71e79c4f.png) <br>
+<img src="https://user-images.githubusercontent.com/102000749/191246617-90782db2-11c3-4583-8a52-d8ec71e79c4f.png" width="660" height="400"/>
+
 ### 2️⃣ 운동
-![image](https://user-images.githubusercontent.com/102000749/191247141-678deae8-5fb0-49fa-8edc-ab4ec92fa6f4.png) <br>
+<img src="https://user-images.githubusercontent.com/102000749/191247141-678deae8-5fb0-49fa-8edc-ab4ec92fa6f4.png" width="660" height="400"/>
+
 ### 3️⃣ 주기적인 피드백
-![image](https://user-images.githubusercontent.com/102000749/191247626-4a2f13b5-6a12-4ec1-9080-483eec3a03ab.png) <br>
+<img src="https://user-images.githubusercontent.com/102000749/191247626-4a2f13b5-6a12-4ec1-9080-483eec3a03ab.png" width="660" height="400"/>
+
 ### 4️⃣ 과제 협업
-![image](https://user-images.githubusercontent.com/102000749/191247835-8a9ab170-380c-4a55-9acd-4d0353f5ded9.png) <br>
-### 5️⃣ 깃허브
-![image](https://user-images.githubusercontent.com/102000749/191387708-512e0b16-5403-4049-98b7-7523ff293e7c.png) <br>
-### 6️⃣ 디스코드
-![image](https://user-images.githubusercontent.com/102000749/191387669-3061d4d3-e0c2-40a6-b031-5fa7cf230dd8.png) <br>
-### 7️⃣ 노션
-![image](https://user-images.githubusercontent.com/102000749/191387756-dd4ca184-22c9-4195-a2ca-2a98e8128937.png) <br>
+<img src="https://user-images.githubusercontent.com/102000749/191247835-8a9ab170-380c-4a55-9acd-4d0353f5ded9.png" width="660" height="400"/>
 
 <br>
 
@@ -100,10 +97,6 @@
 
 ## 🎤 자유 의견
 
-### 👑🧔🏻‍♀️[인성] 
-사람은 누구에게나 재능이 하나씩은 있다고 생각합니다.<br>
-조원들의 재능을 꽃 피울 수 있도록 하는 사람이 되고싶습니다.<br>
-누구의 의견도 무시 받지 않는 팀, 서로를 빛내줄수 있는 팀을 만들고 싶습니다.
 
 ### 👧🏻[유진] 
 우리 조원들이 가진 긍정적인 힘과 기술들을 모아 좋은 프로젝트를 만들고 싶습니다! <br>
@@ -125,5 +118,9 @@
 조원들과 같이 만드는 프로젝트이기 때문에 조원분들의 의견과 실력을 최대한 보여주어서 멋진 프로젝트를 만들고 싶습니다.
 <br>
 
+### 👑🧔🏻‍♀️[인성] 
+사람은 누구에게나 재능이 하나씩은 있다고 생각합니다.<br>
+조원들의 재능을 꽃 피울 수 있도록 하는 사람이 되고싶습니다.<br>
+누구의 의견도 무시 받지 않는 팀, 서로를 빛내줄수 있는 팀을 만들고 싶습니다.
 
 
