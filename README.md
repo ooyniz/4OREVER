@@ -1,5 +1,3 @@
-# 📢 조별활동계획서 
-
 ## WD2A 4조 4OREVER
 
 ## :pushpin: 방법
