@@ -1,5 +1,4 @@
 ## WD2A 4조 4OREVER
-![linkedin_banner_image_2](https://user-images.githubusercontent.com/102000749/194023068-5d57a7c9-06ce-4057-af2e-d98ab93e598b.png)
 
 ## :pushpin: 방법
 
@@ -39,10 +38,10 @@ ex) CamelCase
 함수의 전체 기능에 대한 설명과 함수의 파라미터에 대한 설명을 적어줍니다.
 ```
 /**
-@param {Int} x
-@param {String} y
-@param {Boolean} z
-@return N
+* @param {Int} x
+* @param {String} y
+* @param {Boolean} z
+* @return N
 */
 ```
 
