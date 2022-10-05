@@ -7,9 +7,15 @@
 ## :pushpin: Coding Conventions
 
 ### 변수, 함수, 인스턴스
-변수, 함수, 인스턴스를 작성할 때는 Camel Case`카멜 케이스`를 사용합니다.
+변수, 함수, 인스턴스를 작성할 때는 소문자로 시작하는 camelCase `카멜 케이스`를 사용합니다.
 ```
-ex) camelCase
+ex) int camelCase = 0;
+```
+
+### 클래스, 패키지
+클래스를 작성할 때는 대문자로 시작하는 CamelCase `카멜 케이스`를 사용합니다.
+```
+ex) class CamelCase
 ```
 
 ### 함수명 작성
