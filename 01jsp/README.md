@@ -1,4 +1,5 @@
 ## WD2A 4조 4OREVER
+![linkedin_banner_image_2](https://user-images.githubusercontent.com/102000749/194023068-5d57a7c9-06ce-4057-af2e-d98ab93e598b.png)
 
 ## :pushpin: 방법
 
