@@ -1,11 +1,7 @@
 # 📢 조별활동계획서 
-
+![linkedin_banner_image_2](https://user-images.githubusercontent.com/102000749/194023128-699a1669-6d47-4549-9484-486cfa7fa8a0.png)
 ## WD2A 4조 4OREVER
 ### 🐾 영원함을 뜻하는 FOREVER 처럼, 4조원들이 영원히 함께 하자는 뜻을 담아 이름 짓게 되었습니다.
-
-notion
-
-https://potatow.notion.site/4OREVER-16c7f9d1ddf642ca8aef729fa34d5f9b
 
 
 
