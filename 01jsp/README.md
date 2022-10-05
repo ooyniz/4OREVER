@@ -12,20 +12,14 @@
 ex) int camelCase = 0;
 ```
 
-### 클래스, 패키지
-클래스를 작성할 때는 대문자로 시작하는 CamelCase `카멜 케이스`를 사용합니다.
-```
-ex) class CamelCase
-```
-
 ### 함수명 작성
 함수명을 작성할 때는 동사 + 명사 형태로 구성합니다.
 ```
 ex) getUserInformation()
 ```
 
-### Class, Constructor
-Class, Constructor를 작성할 때는 Pascal Case`=upper 카멜 케이스`를 사용합니다.
+### Class, Constructor, Package
+Class, Constructor, Package를 작성할 때는 Pascal Case`=upper 카멜 케이스`를 사용합니다.
 ```
 ex) CamelCase
 ```
