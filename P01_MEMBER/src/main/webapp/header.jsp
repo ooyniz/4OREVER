@@ -55,7 +55,7 @@
 <%
 		if(session.getAttribute("loginState").equals("login")){
 %>
-			<%@ include file= "/GNB.jsp" %>
+			<%@ include file= "./GNB.jsp" %>
 <%
 		}
 %>
