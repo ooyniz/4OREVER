@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- Start of header -->
+	<%@ include file="../header.jsp"%>
+	<!-- End of header -->
+<h1>송성혁 소개 페이지</h1>
 <hr>
+
+	<!-- Start of footer -->
+	<%@ include file="../footer.jsp"%>
+	<!-- End of footer -->
 </body>
 </html>

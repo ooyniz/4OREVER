@@ -24,11 +24,9 @@
 	 %>
 	<hr>
 	<!-- Start of header -->
-	<header>
 	<%@ include file="../header.jsp"%>
-	
-	</header>
 	<!-- End of header -->
+	
 	<!-- Start of nav -->
 	<nav>
 	
@@ -36,18 +34,18 @@
 	<!-- End of nav -->
 	<h1>회원가입</h1>
 	<form method="post" action="./member_dao.jsp">
-		ID<br>
+		<label>ID</label><br>
 		<input type="text" placeholder = "ID" name="userID" maxlength = "20">
 		<input type="submit" value= "ID 중복 체크"><br>
-		PassWord<br>
+		<label>PassWord</label><br>
 		<input type="password" placeholder = "PassWord" name="userPW" maxlength = "20"><br>
-		Name<br>
+		<label>Name</label><br>
 		<input type="text" placeholder = "Name" name="userName" maxlength = "20"><br>
-		e-mail<br>
+		<label>E-mail</label><br>
 		<input type="email" placeholder = "e-mail" name="userMail" maxlength = "20"><br>
-		phone number<br>
+		<label>Phone</label><br>
 		<input type="text" placeholder = "phone" name="userPhone" maxlength = "20"><br>
-		RRN<br>
+		<label>주민등록번호</label><br>
 		<input type="text" name="userRRN" maxlength = "20"> -
 		<input type="password" name="userRRN" maxlength = "20"><br><br>
 		<input type="button" value= "제출"><br>
@@ -55,10 +53,7 @@
 	
 	
 	<!-- Start of footer -->
-	<footer>
-	
 	<%@ include file="../footer.jsp"%>
-	</footer>
 	<!-- End of footer -->
 </body>
 </html>

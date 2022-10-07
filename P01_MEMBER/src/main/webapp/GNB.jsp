@@ -10,11 +10,12 @@
 <hr>
 	<table>
 	<tr>
-	  <td><a href="/member01/mem_views/member01.jsp">GNB01</a></td>
-	  <td><a href="/member01/mem_views/member02.jsp">GNB02</a></td>
-	  <td><a href="/member01/mem_views/member03.jsp">GNB03</a></td>
-	  <td><a href="/member01/mem_views/member04.jsp">GNB04</a></td>
-	  <td><a href="/member01/mem_views/member05.jsp">GNB05</a></td>
+	  <td><a href="../mem_views/member01.jsp">GNB01</a></td>
+	  <td><a href="/P01_MEMBER/mem_views/member02.jsp">GNB02</a></td>
+	  <td><a href="/P01_MEMBER/mem_views/member03.jsp">GNB03</a></td>
+	  <td><a href="/P01_MEMBER/mem_views/member04.jsp">GNB04</a></td>
+	  <td><a href="/P01_MEMBER/mem_views/member05.jsp">GNB05</a></td>
+	  <td><a href="/P01_MEMBER/mem_views/member06.jsp">GNB06</a></td>
 	</tr>
 	</table>
 </body>
