@@ -21,7 +21,7 @@
 <body>
 	<a href="/P01_MEMBER/mem_views/member01.jsp">
 		<div class="card" style="width: 18rem;">
-			<img src="./images/logout01.jpg" class="card-img-top" alt="...">
+			<img src="/P01_MEMBER/images/logout01.jpg" class="card-img-top" alt="...">
 			<div class="card-body">
 				<p class="card-text">Some quick example text to build on the
 					card title and make up the bulk of the card's content.</p>
@@ -29,14 +29,14 @@
 		</div>
 	</a>
 	<div class="card" style="width: 18rem;">
-		<img src="./images/logout01.jpg" class="card-img-top" alt="...">
+		<img src="/P01_MEMBER/images/logout01.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<p class="card-text">Some quick example text to build on the card
 				title and make up the bulk of the card's content.</p>
 		</div>
 	</div>
 	<div class="card" style="width: 18rem;">
-		<img src="./images/logout01.jpg" class="card-img-top" alt="...">
+		<img src="/P01_MEMBER/images/logout01.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<p class="card-text">Some quick example text to build on the card
 				title and make up the bulk of the card's content.</p>
