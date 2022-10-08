@@ -4,6 +4,18 @@
 <head>
 <meta charset="UTF-8">
 <title>헤더</title>
+<!-- 부트스트랩 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+	<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -11,8 +23,8 @@
 
 <table>
  <tr>
-	 <td><img src="/P01_MEMBER/images/logo.png" height="100" width="100"/></td> 
-	 <td width="400" align="center"><h1>4OREVER</h1></td> 
+	 <td><img src="/P01_MEMBER/images/logo2.png"  width="150" height="150" /></td> 
+	 <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150" /></td> 
 	 <td>
 <%
 		if( session.isNew()) {
@@ -23,7 +35,7 @@
 		if(session.getAttribute("loginState").equals("login")){
 %>
 		<%=session.getAttribute("userid")%>님 로그인중.
-		<form name="logout" method="post" action="./mem_models/member_dao.jsp">
+		<form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
 		  <input type="hidden" name="actionType" value="LOGOUT">
 		  <input type="submit" value="로그아웃">
 		</form> 
@@ -37,6 +49,7 @@
 		    <input type="hidden" name="actionType" value="LOGIN">
 		    <input type="submit" value="로그인">
 		 </form>
+		 <button class="btn btn-outline-success" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
 <%
 			if(session.getAttribute("loginState").equals("errorID")){
 				out.print("[사용자ID오류]");
