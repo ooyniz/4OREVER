@@ -51,7 +51,6 @@
 		<input type="button" value= "제출"><br>
 	</form>
 	
-	
 	<!-- Start of footer -->
 	<%@ include file="../footer.jsp"%>
 	<!-- End of footer -->
