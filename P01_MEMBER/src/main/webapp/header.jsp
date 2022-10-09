@@ -26,15 +26,16 @@
 	 <td><img src="/P01_MEMBER/images/logo2.png"  width="150" height="150" /></td> 
 	 <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150"  /></td> 
 	 <td>
-<%
-		if( session.isNew()) {
-			session.setAttribute("loginState", "logout");
-			session.setAttribute("userid", null);
-			session.setAttribute("userpw", null);
+	<%
+		if (session.isNew()) {
+		session.setAttribute("loginState", "logout");
+		session.setAttribute("user_num", 0);
+		session.setAttribute("user_name", null);
+		session.setAttribute("user_class", 0);
 		}
-		if(session.getAttribute("loginState").equals("login")){
-%>
-		<%=session.getAttribute("userid")%>님 로그인중.
+		if (session.getAttribute("loginState").equals("login")) {
+	%>
+		<%=session.getAttribute("user_name")%>님 로그인중.
 		<form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
 		  <input type="hidden" name="actionType" value="LOGOUT">
 		  <input class="btn btn-outline-success" type="submit" value="로그아웃">
