@@ -85,17 +85,6 @@
 		    	session.setAttribute("user_name", null);
 		    	session.setAttribute("user_class", 0);
 		    }
-		    
-		    
-		    // 아이디 중복 검사용 아이디 리스트
-		    // 임시로 로그인에 넣었는데 나중에 위치 바꿔야함.
-		   	sql = "SELECT mem_id FROM member;";
-		   	rs = pstmt.executeQuery(sql);
-		   	
-		   	while (rs.next()) {
-				allUserIdList.add(rs.getString(1));
-		   	}
-		   	session.setAttribute("allUserIdList", allUserIdList);
 		   	
 		    break;
 		    
@@ -108,21 +97,16 @@
 		    session.setAttribute("user_class", 0);
 			break;
 			
-		/* 아이디 중복검사를 위해서 가입된 id를 배열로 세션에 넣어주기 */
-		case "":
-			
-			break;
-			
 		/* mem_edit에서 받은 데이터로 쿼리문 실행하고 결과 성공/실패 출력 */
 		/* 아이디 중복검사, 주민번호 유효성 검사 끝난 데이터만 넘어옴 */
 		case "EDIT":
-			userNum = Integer.parseInt(request.getParameter("userNum"));
+			userNum = (int) session.getAttribute("user_num");
 			userPW = request.getParameter("userPW");
 			userName = request.getParameter("userName");
 			userMail = request.getParameter("userMail");
 			userPhone = request.getParameter("userPhone");
 			
-			sql = "UPDATE member SET mem_pw=?, mem_name=?, mem_email=?, mem_phone=? WEHER mem_num=?";
+			sql = "UPDATE member SET mem_pw=?, mem_name=?, mem_email=?, mem_phone=? WHERE mem_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, userPW);
 			pstmt.setString(2, userName);
@@ -133,23 +117,30 @@
 			sqlResult = pstmt.executeUpdate();
 			
 			if (sqlResult == 1) {
-				%>
-				<script>
-				alert("회원정보 수정에 성공하였습니다.");
-				</script>
-				<%
+				// 그냥 script 쓰면 제어권이 이미 index에 가있으므로 작동 안됨.
+				session.setAttribute("alert", "회원정보가 성공적으로 수정되었습니다");
 			} else {
-				%>
-				<script>
-				alert("회원정보 수정에 실패하였습니다.");
-				</script>
-				<%
+				session.setAttribute("alert", "회원정보 수정에 실패하였습니다.");
 			}
 			
 			break;
 			
 		/* 회원탈퇴 */
 		case "DELETE":
+			userNum = (int) session.getAttribute("user_num");
+			sql = "DELETE FROM member WHERE mem_num=" + userNum;
+			pstmt = con.prepareStatement(sql);
+			sqlResult = pstmt.executeUpdate();
+			
+			if (sqlResult == 1) {
+				session.setAttribute("loginState", "logout");
+				session.setAttribute("user_num", 0);
+				session.setAttribute("user_name", null);
+				session.setAttribute("user_class", 0);
+				session.setAttribute("alert", "회원탈퇴가 완료되었습니다");
+			} else {
+				session.setAttribute("alert", "회원탈퇴에 실패하였습니다.");
+			}
 			
 			break;
 			

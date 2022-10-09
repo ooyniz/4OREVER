@@ -32,6 +32,7 @@
 		session.setAttribute("user_num", 0);
 		session.setAttribute("user_name", null);
 		session.setAttribute("user_class", 0);
+		session.setAttribute("alert", null);
 		}
 		if (session.getAttribute("loginState").equals("login")) {
 	%>
