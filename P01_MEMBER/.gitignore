@@ -99,7 +99,7 @@ replay_pid*
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
-ehthumbs_vista.db
+ehthumbs_vista.dbs
 
 # Dump file
 *.stackdump

@@ -29,16 +29,21 @@
 				data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators"
 				data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+				data-bs-slide-to="3" aria-label="Slide 4"></button>
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./images/logout01.jpg" class="d-block w-100" alt="logout01.jpg">
+				<img src="/P01_MEMBER/images/logout01.jpg" class="d-block w-100" alt="logout01.jpg">
 			</div>
 			<div class="carousel-item">
-				<img src="./images/logout02.jpg" class="d-block w-100" alt="logout02.jpg">
+				<img src="/P01_MEMBER/images/logout02.jpg" class="d-block w-100" alt="logout02.jpg">
 			</div>
 			<div class="carousel-item">
-				<img src="./images/logout03.jpg" class="d-block w-100" alt="logout03.jpg">
+				<img src="/P01_MEMBER/images/logout03.jpg" class="d-block w-100" alt="logout03.jpg">
+			</div>
+			<div class="carousel-item">
+				<img src="/P01_MEMBER/images/logout04.jpg" class="d-block w-100" alt="logout04.jpg">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button"

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>타이틀</title>
+<title>4OREVER</title>
 <!-- 아이콘 -->
 <link rel="icon" type="image/x-icon" href="/P01_MEMBER/images/favicon.png" />
 <!-- 부트스트랩 -->

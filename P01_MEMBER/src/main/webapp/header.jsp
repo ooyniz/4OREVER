@@ -24,7 +24,7 @@
 <table>
  <tr>
 	 <td><img src="/P01_MEMBER/images/logo2.png"  width="150" height="150" /></td> 
-	 <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150" /></td> 
+	 <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150"  /></td> 
 	 <td>
 <%
 		if( session.isNew()) {
@@ -37,7 +37,7 @@
 		<%=session.getAttribute("userid")%>님 로그인중.
 		<form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
 		  <input type="hidden" name="actionType" value="LOGOUT">
-		  <input type="submit" value="로그아웃">
+		  <input class="btn btn-outline-success" type="submit" value="로그아웃">
 		</form> 
 <%
 		}
@@ -47,7 +47,8 @@
 		    아이디 : <input type="text" name="userid" size="10">
 		    비밀번호 : <input type="password" name="passwd" size="10">
 		    <input type="hidden" name="actionType" value="LOGIN">
-		    <input type="submit" value="로그인">
+		    <input class="btn btn-outline-success" type="submit" value="로그인">
+		    
 		 </form>
 		 <button class="btn btn-outline-success" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
 <%
