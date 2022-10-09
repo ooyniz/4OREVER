@@ -20,7 +20,7 @@
 	
 </script>
 </head>
-<body>
+<body style="color: f9ecd9">
 
 	<div class="container">
 		<div class="row">

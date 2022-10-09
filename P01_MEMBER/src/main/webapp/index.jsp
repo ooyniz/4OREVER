@@ -19,8 +19,9 @@
 	crossorigin="anonymous"></script>
 	<!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
+
 </head>
-<body>
+<body style="color: f9ecd9">
 	<!-- header.jsp 시작 -->
 	<%@ include file="./header.jsp"%>
 	<!-- header.jsp 끝 -->
