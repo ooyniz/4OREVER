@@ -42,7 +42,7 @@
 			currentPageNo = Integer.parseInt(request.getParameter("currentPageNo"));
 		} catch (Exception e) {
 			limitCnt = 10;
-			currentPageNo = 1;
+			currentPageNo = 0;
 		}
 		
 		while (rs.next()) {
