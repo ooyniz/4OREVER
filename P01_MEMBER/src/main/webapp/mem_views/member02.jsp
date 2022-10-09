@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>곽유진 소개 페이지</title>
+<title>4OREVER :: 곽유진</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon" href="/P01_MEMBER/images/favicon.png" />
 </head>
 <body>
 	<!-- Start of header -->
 	<%@ include file="../header.jsp"%>
 	<!-- End of header -->
-<h1>김정수 소개 페이지</h1>
+<h1>곽유진 소개 페이지</h1>
 <hr>
 
 	<!-- Start of footer -->

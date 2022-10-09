@@ -41,9 +41,9 @@
 		    아이디 : <input type="text" name="userid" size="10">
 		    비밀번호 : <input type="password" name="passwd" size="10">
 		    <input type="hidden" name="actionType" value="LOGIN">
-		    <input class="btn btn-outline-success" type="submit" value="로그인">
+		    <input class="btn btn-outline-success m-2" type="submit" value="로그인">
 		 </form>
-		 <button class="btn btn-outline-success" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
+		 <button class="btn btn-outline-success m-" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
 <%
 			if(session.getAttribute("loginState").equals("errorID")){
 				out.print("[사용자ID오류]");

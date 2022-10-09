@@ -42,10 +42,10 @@
 			<div class="col">
 				<a href="/P01_MEMBER/mem_views/member02.jsp">
 					<div class="card" style="width: 18rem;">
-						<img src="/P01_MEMBER/images/m02.jpg" class="card-img-top" alt="member02">
+						<img src="/P01_MEMBER/images/m02.jpg" class="card-img-top" alt="member03">
 						<div class="card-body">
-							<p class="card-text">24살 개발자 김정수입니다.
-								백엔드를 담당했습니다.</p>
+							<p class="card-text">23살 개발자 곽유진입니다.
+								프론트엔드를 담당했습니다.</p>
 						</div>
 					</div>
 				</a>
@@ -54,10 +54,10 @@
 			<div class="col">
 				<a href="/P01_MEMBER/mem_views/member03.jsp">
 					<div class="card" style="width: 18rem;">
-						<img src="/P01_MEMBER/images/m03.jpg" class="card-img-top" alt="member03">
+						<img src="/P01_MEMBER/images/m03.jpg" class="card-img-top" alt="member02">
 						<div class="card-body">
-							<p class="card-text">23살 개발자 곽유진입니다.
-								프론트엔드를 담당했습니다.</p>
+							<p class="card-text">24살 개발자 김정수입니다.
+								백엔드를 담당했습니다.</p>
 						</div>
 					</div>
 				</a>
@@ -76,7 +76,7 @@
 					<div class="card" style="width: 18rem;">
 						<img src="/P01_MEMBER/images/m04.jpg" class="card-img-top" alt="member04">
 						<div class="card-body">
-							<p class="card-text">25살 개발자 조규태입니다.
+							<p class="card-text">25살 개발자 노태권입니다.
 								백엔드를 담당했습니다.</p>
 						</div>
 					</div>
@@ -88,7 +88,7 @@
 					<div class="card" style="width: 18rem;">
 						<img src="/P01_MEMBER/images/m05.jpg" class="card-img-top" alt="member05">
 						<div class="card-body">
-							<p class="card-text">23살 개발자 노태권입니다.</p>
+							<p class="card-text">23살 개발자 송성혁입니다.</p>
 						</div>
 					</div>
 				</a>
@@ -99,7 +99,7 @@
 					<div class="card" style="width: 18rem;">
 						<img src="/P01_MEMBER/images/m06.jpg" class="card-img-top" alt="member06">
 						<div class="card-body">
-							<p class="card-text">개발자 송성혁입니다.</p>
+							<p class="card-text">개발자 조규태입니다.</p>
 						</div>
 					</div>
 				</a>

@@ -24,15 +24,15 @@
 					<li class="nav-item"><a class="nav-link"
 						href="/P01_MEMBER/mem_views/member01.jsp">왕인성</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member02.jsp">김정수</a></li>
+						href="/P01_MEMBER/mem_views/member02.jsp">곽유진</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member03.jsp">곽유진</a></li>
+						href="/P01_MEMBER/mem_views/member03.jsp">김정수</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/P01_MEMBER/mem_views/member04.jsp">노태권</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member05.jsp">조규태</a></li>
+						href="/P01_MEMBER/mem_views/member05.jsp">송성혁</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member06.jsp">송성혁</a></li>
+						href="/P01_MEMBER/mem_views/member06.jsp">조규태</a></li>
 
 				</ul>
 				<button class="btn btn-outline-success" type="button"
