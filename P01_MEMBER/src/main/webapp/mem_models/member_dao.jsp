@@ -153,7 +153,7 @@
 			userPhone = request.getParameter("userPhone");
 			userClass = Integer.parseInt(request.getParameter("userClass"));
 			
-			sql = "UPDATE member SET mem_pw=?, mem_name=?, mem_email=?, mem_phone=?, mem_class=? WEHER mem_num=?";
+			sql = "UPDATE member SET mem_pw=?, mem_name=?, mem_email=?, mem_phone=?, mem_class=? WHERE mem_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, userPW);
 			pstmt.setString(2, userName);
@@ -165,19 +165,24 @@
 			sqlResult = pstmt.executeUpdate();
 			
 			if (sqlResult == 1) {
-				%>
-				<script>
-				alert("회원정보 수정에 성공하였습니다.");
-				</script>
-				<%
+				session.setAttribute("alert", "회원정보가 성공적으로 수정되었습니다");
 			} else {
-				%>
-				<script>
-				alert("회원정보 수정에 실패하였습니다.");
-				</script>
-				<%
+				session.setAttribute("alert", "회원정보 수정에 실패하였습니다.");
 			}
 			
+			break;
+			
+		case "DELETE_ADMIN":
+			userNum = Integer.parseInt(request.getParameter("userNum"));
+			sql = "DELETE FROM member WHERE mem_num=" + userNum;
+			pstmt = con.prepareStatement(sql);
+			sqlResult = pstmt.executeUpdate();
+			
+			if (sqlResult == 1) {
+				session.setAttribute("alert", "회원탈퇴가 완료되었습니다");
+			} else {
+				session.setAttribute("alert", "회원탈퇴에 실패하였습니다.");
+			}
 			break;
 	}
 %>

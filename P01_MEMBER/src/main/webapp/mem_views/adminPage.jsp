@@ -107,6 +107,10 @@
 					mem_email = rs.getString("mem_email");
 					mem_phone = rs.getString("mem_phone");
 					mem_class = rs.getString("mem_class");
+					
+					if (mem_class.equals("100")) mem_class = "일반 회원";
+					else if (mem_class.equals("200")) mem_class = "부관리자";
+					else if (mem_class.equals("300")) mem_class = "관리자";
 				%>
 				<tr>
 					<td><%=mem_num%></td>
@@ -115,7 +119,18 @@
 					<td><%=mem_email%></td>
 					<td><%=mem_phone%></td>
 					<td><%=mem_class%></td>
-					<td>수정</td>
+					<%
+					// 부관리자가 관리자 못건들게
+					if ((int)session.getAttribute("user_class") == 200 && !mem_class.equals("관리자")) {
+						%>
+						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
+						<%
+					} else if ((int)session.getAttribute("user_class") == 300) {
+						%>
+						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
+						<%
+					}
+					%>
 				</tr>
 				<%
 				}
