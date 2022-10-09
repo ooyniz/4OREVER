@@ -5,12 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>네비게이션 바</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<hr>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
+		<div class="container-fluid" id="GNB">
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -39,10 +40,18 @@
 					onclick="location.href='/P01_MEMBER/mem_views/mem_edit.jsp' ">정보수정</button>
 
 				<!-- 여기에 if else넣어서 이동링크 ㄱ -->
-				<button class="btn btn-outline-success" type="button"
+				<button v-if="userClass == 200 || userClass == 300" class="btn btn-outline-success" type="button"
 					onclick="location.href='/P01_MEMBER/mem_views/adminPage.jsp' ">관리자페이지</button>
 			</div>
 		</div>
 	</nav>
+	<script>
+	let app = new Vue({
+		el: '#GNB',
+		data: {
+			userClass : <%=session.getAttribute("user_class")%>,
+		},
+	})
+	</script>
 </body>
 </html>
