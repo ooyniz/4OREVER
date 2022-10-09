@@ -18,14 +18,8 @@
 <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-
-
-
 <table>
- <tr>
-	 <td><img src="/P01_MEMBER/images/logo2.png"  width="150" height="150" /></td> 
-	 <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150"  /></td> 
-	 <td>
+	 <a href="/P01_MEMBER/index.jsp"><img src="/P01_MEMBER/images/nobg_banner.png"  width="40%" height="40%" /></a>
 <%
 		if( session.isNew()) {
 			session.setAttribute("loginState", "logout");
@@ -48,7 +42,6 @@
 		    비밀번호 : <input type="password" name="passwd" size="10">
 		    <input type="hidden" name="actionType" value="LOGIN">
 		    <input class="btn btn-outline-success" type="submit" value="로그인">
-		    
 		 </form>
 		 <button class="btn btn-outline-success" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
 <%
@@ -60,10 +53,8 @@
 				out.print("[사용자PW오류]");
 			}
 		}
-%>		
-	 </td>
- </tr>
-</table>
+%>
+</table>		
 <%
 		if(session.getAttribute("loginState").equals("login")){
 %>
