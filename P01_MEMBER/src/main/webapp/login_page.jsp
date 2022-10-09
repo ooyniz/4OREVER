@@ -33,7 +33,7 @@
 						<img src="/P01_MEMBER/images/m01.jpg" class="card-img-top" alt="member01">
 						<div class="card-body">
 							<p class="card-text">28살 개발자 왕인성입니다.
-								프론트엔드를 담당했습니다.</p>
+								총괄을 담당했습니다.</p>
 						</div>
 					</div>
 				</a>

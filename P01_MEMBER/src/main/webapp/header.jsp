@@ -28,10 +28,10 @@
 		}
 		if(session.getAttribute("loginState").equals("login")){
 %>
-		<%=session.getAttribute("userid")%>님 로그인중.
+		<b><%=session.getAttribute("userid")%>님 🤗</b>
 		<form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
 		  <input type="hidden" name="actionType" value="LOGOUT">
-		  <input class="btn btn-outline-success" type="submit" value="로그아웃">
+		  <input class="btn btn-outline-success m-2" type="submit" value="로그아웃">
 		</form> 
 <%
 		}
