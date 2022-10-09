@@ -28,9 +28,9 @@
 			<div class="col"></div>
 			<!-- member01.jsp -->
 			<div class="col">
-				<a href="/P01_MEMBER/mem_views/m01.jsp">
+				<a href="/P01_MEMBER/mem_views/member01.jsp">
 					<div class="card" style="width: 18rem;">
-						<img src="/P01_MEMBER/images/member01.jpg" class="card-img-top" alt="member01">
+						<img src="/P01_MEMBER/images/m01.jpg" class="card-img-top" alt="member01">
 						<div class="card-body">
 							<p class="card-text">28살 개발자 왕인성입니다.
 								프론트엔드를 담당했습니다.</p>
@@ -88,8 +88,7 @@
 					<div class="card" style="width: 18rem;">
 						<img src="/P01_MEMBER/images/m05.jpg" class="card-img-top" alt="member05">
 						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the
-								card title and make up the bulk of the card's content.</p>
+							<p class="card-text">23살 개발자 노태권입니다.</p>
 						</div>
 					</div>
 				</a>
@@ -100,8 +99,7 @@
 					<div class="card" style="width: 18rem;">
 						<img src="/P01_MEMBER/images/m06.jpg" class="card-img-top" alt="member06">
 						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the
-								card title and make up the bulk of the card's content.</p>
+							<p class="card-text">개발자 송성혁입니다.</p>
 						</div>
 					</div>
 				</a>

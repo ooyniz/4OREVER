@@ -10,7 +10,7 @@
 	<!-- Start of header -->
 	<%@ include file="../header.jsp"%>
 	<!-- End of header -->
-<h1>노태권 소개 페이지</h1>
+<h1>곽유진 소개 페이지</h1>
 <hr>
 
 	<!-- Start of footer -->
