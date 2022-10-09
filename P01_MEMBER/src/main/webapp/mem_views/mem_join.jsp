@@ -1,3 +1,4 @@
+<%@page import="java.sql.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -28,14 +29,34 @@
 	* @return
 	*/
 	%>
-	<!-- 아이디 중복검사용. 세션에 있는 아이디를 자바스크립트로 옮기기 -->
+	<%
+	String driverName = "org.mariadb.jdbc.Driver";
+	String url = "jdbc:mariadb://localhost:3306/member_db";
+	String user = "root";
+	String passwd = "password";
+	
+	Class.forName(driverName);
+	Connection con = DriverManager.getConnection(url, user, passwd);
+	PreparedStatement pstmt = null;
+	request.setCharacterEncoding("utf-8");
+	
+	String sql = null;
+	ResultSet rs = null;
+	ArrayList<String> allUserIdList = new ArrayList<String>();
+
+	sql = "SELECT mem_id FROM member;";
+	pstmt = con.prepareStatement(sql);
+   	rs = pstmt.executeQuery(sql);
+   	
+   	while (rs.next()) {
+		allUserIdList.add(rs.getString(1));
+   	}
+	%>
+	<!-- 아이디 중복검사용. 자바에 있는 아이디를 자바스크립트로 옮기기 -->
 	 <script type="text/javascript">
 		 	let allUserIdList = [];
 	</script>
 	 <%
-	 @SuppressWarnings("unchecked")
-	 ArrayList<String> allUserIdList = (ArrayList<String>)session.getAttribute("allUserIdList");
-	 
 	 for (String s : allUserIdList) {
 		 %>
 		 <script type="text/javascript">
