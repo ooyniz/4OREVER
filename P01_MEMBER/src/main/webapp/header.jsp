@@ -48,9 +48,12 @@
 </style>
 <body>
 	<table>
-		<a href="/P01_MEMBER/index.jsp"><img
-			src="/P01_MEMBER/images/nobg_banner.png" width="30%" height="30%" /></a>
-		<div class="Justify-content-end">
+	<div style="float:left">
+		<a href="/P01_MEMBER/index.jsp">
+		<img src="/P01_MEMBER/images/nobg_banner.png" width="30%" height="30%" /></a>
+	</div>
+		
+		<div  style="float:right">
 			<%
 			if (session.isNew()) {
 				session.setAttribute("loginState", "logout");
@@ -61,7 +64,6 @@
 			}
 			if (session.getAttribute("loginState").equals("login")) {
 			%>
-
 			<span id="spantext"><%=session.getAttribute("user_name")%>님 🤗</span>
 			<form name="logout" method="post"
 				action="/P01_MEMBER/mem_models/member_dao.jsp">
@@ -98,7 +100,7 @@
 			<%
 			}
 			%>
-		</div>
+			</div>
 	</table>
 </body>
 </html>
