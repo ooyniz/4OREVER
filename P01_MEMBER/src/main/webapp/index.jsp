@@ -29,9 +29,7 @@
 	<%
 	if (session.getAttribute("alert") != null) {
 	%>
-	<script>alert('<%=session.getAttribute("alert")%>
-		')
-	</script>
+	<script>alert('<%=session.getAttribute("alert")%>')</script>
 	<%
 	session.setAttribute("alert", null);
 	}
