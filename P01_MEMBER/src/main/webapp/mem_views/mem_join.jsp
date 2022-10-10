@@ -88,12 +88,17 @@
 			<input type="text" placeholder="ID" name="userID" maxlength="20" @input="[idCheck(), canSubmitCheck()]" v-model="userId">
 				{{idCheckResult}}<br>
 				
-			<sup id="important">*</sup>PassWord<br>
-			<input type="password" placeholder="PassWord" name="userPW" maxlength="20"><br> <sup id="important">
-			
-			*</sup>PassWord Check<br>
-			<input type="password" placeholder="PassWord" name="userPW" maxlength="20">
-			<span style="color: gray">비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span> <br>
+			<sup id="important">*</sup>PassWord<span style="color: gray"> &nbsp;&nbsp;&nbsp;비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span><br>
+			<input type="password"
+				v-model="password" placeholder="PassWord" name="userPW"
+				maxlength="20" @blur="passwordValid">
+				<!-- blur 태그: 체크아웃 되는지 검사 -->
+			<div v-if="!passwordValidFlag">유효하지 않은 비밀번호 입니다.</div>
+			<sup id="important">*</sup>PassWord Check<br> <input
+				type="password" v-model="passwordCheck" placeholder="PassWord Check"
+				name="userPWck" maxlength="20" @blur="passwordCheckValid">
+			<div v-if="!passwordCheckFlag">비밀번호가 동일하지 않습니다.</div>
+			<br>
 			
 			<sup id="important">*</sup>Name<br>
 			<input type="text" placeholder="Name" name="userName" maxlength="20"><br>
@@ -137,6 +142,10 @@
 			RRN1 : '',
 			RRN2 : '',
 			isValid : '유효하지 않은 주민번호입니다.',
+			password: null, // 비밀번호
+			passwordCheck: null, // 비밀번호 확인
+			passwordValidFlag: true, // 비밀번호 유효성 검사 
+			passwordCheckFlag: true, // 비밀번호랑 비밀번호 확인이 똑같은지 검사
 		},
 		methods: {
 			idCheck() {
@@ -165,7 +174,23 @@
 					this.isValid = '유효하지 않은 주민번호입니다.'
 				}
 			},
+			passwordValid () {
+				if (/^(?=.*[a-z])(?=.*[0-9]).{6,20}$/.test(this.password)) { // 비밀번호 유효성 검사(영어&숫자 혼합해서 6 ~ 20자리)
+					this.passwordValidFlag = true
+			    } else {
+			    	this.passwordValidFlag = false
+			    }
+			},
+			
+			passwordCheckValid () {
+			    if (this.password === this.passwordCheck) { // 비밀번호랑 비밀번호 확인이 맞는지 검사
+			        this.passwordCheckFlag = true
+			    } else {
+			     	this.passwordCheckFlag = false
+			    }
+			},
 		},
+		
 		computed: {
 			idCheckResult() {
 				if (this.userId.length < 5) {
