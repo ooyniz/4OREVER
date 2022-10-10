@@ -8,6 +8,11 @@
 <meta charset="UTF-8">
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <title>4OREVER :: 회원가입</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
 </head>
 
 <style>
@@ -77,17 +82,17 @@
 	<!-- nav 시작 -->
 	<nav></nav>
 	<!-- nav 끝 -->
-
+	<br>
 	<h1>회원가입</h1>
 
 	<!-- 회원가입 시작 -->
 	<div id="join">
 		<form action="../mem_models/member_dao.jsp" method="post" id="form">
-			<sup id="important">*</sup>ID<br>
+			<label for="mem_id"><sup id="important">*</sup>ID</label><br>
 			<input type="text" placeholder="ID" name="userID" maxlength="20" id="mem_id" @input="[idCheck(), canSubmitCheck()]" v-model="userId">
 				{{idCheckResult}}<br>
 				
-			<sup id="important">*</sup>PassWord<span style="color: gray"> &nbsp;&nbsp;&nbsp;비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span><br>
+			<label for="password"><sup id="important">*</sup>PassWord</label><span style="color: gray"> &nbsp;&nbsp;&nbsp;비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span><br>
 			<input type="password"
 				v-model="password" placeholder="PassWord" name="userPW" id="mem_pw" 
 				maxlength="20" @blur="[passwordValid(), canSubmitCheck()]">
@@ -101,16 +106,16 @@
 			<div v-if="!passwordCheckFlag">비밀번호가 동일하지 않습니다.</div>
 			<br>
 			
-			<sup id="important">*</sup>Name<br>
+			<label for="mem_name"><sup id="important">*</sup>Name</label><br>
 			<input type="text" placeholder="Name" name="userName" maxlength="20" id="mem_name"><br>
 			
-			e-mail<br>
+			<label for="mem_email">e-mail</label><br>
 			<input type="email" placeholder="e-mail" name="userMail" maxlength="20" id="mem_email"><br>
 			
-			phone number<br>
+			<label for="mem_phone">phone number</label><br>
 			<input type="text" placeholder="phone" name="userPhone" maxlength="20" id="mem_phone"><br>
 			
-			<sup id="important">*</sup>RRN<br>
+			<label for="mem_RRN1"><sup id="important">*</sup>RRN</label><br>
 			<input type="text" name="userRRN1" minlength="6" maxlength="6" id="mem_RRN1" v-model="RRN1" @input="[checkRRN(), canSubmitCheck()]">
 			- <input type="password" name="userRRN2" minlength="7" maxlength="7" id="mem_RRN2" v-model="RRN2" @input="[checkRRN(), canSubmitCheck()]">
 			{{rrnCheckResult}}<br><br>

@@ -5,7 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지</title>
+<title>4OREVER :: 관리자 페이지</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
@@ -69,9 +74,8 @@
 <!-- header.jsp 시작 -->
 <%@ include file="../header.jsp"%>
 <!-- header.jsp 끝 -->
-
+	<br>
 	<h1>관리자 페이지</h1>
-	<hr>
 	
 	<form method="post" action="./adminPage.jsp">
 	페이지당 표시할 줄 : 

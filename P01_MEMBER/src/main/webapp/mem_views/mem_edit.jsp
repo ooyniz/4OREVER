@@ -5,8 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 수정 및 삭제</title>
-
+<title>4OREVER :: 회원 수정 및 삭제</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
 <!-- 부트스트랩 -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -55,14 +59,14 @@
 	<!-- header.jsp 시작 -->
 	<%@ include file="../header.jsp"%>
 	<!-- header.jsp 끝 -->
+	<br>
 	<h1>회원 수정 페이지</h1>
-	<hr>
 	<div id="page">
 		<form action="../mem_models/member_dao.jsp" method="post" id="form">
 			<label>ID</label>
 			<input type="text" disabled="disabled" value="<%=mem_id%>">
 			<br>
-			
+			</tr>
 			<label for="password">Password</label>
 			<input type="password" id="password" value="<%=mem_pw%>" name="userPW">
 			<br>
@@ -90,7 +94,6 @@
 			<input type="hidden" value="EDIT" name="actionType">
 			<input type="button" value="수정" @click="editSubmitCheck()">
 		</form>
-		
 		<form action="../mem_models/member_dao.jsp" method="post" id="form2">
 			<input type="hidden" value="DELETE" name="actionType">
 			<input type="button" value="탈퇴" @click="deleteSubmitCheck()">
