@@ -62,7 +62,7 @@
 			if (session.getAttribute("loginState").equals("login")) {
 			%>
 
-			<span id="spantext"><%=session.getAttribute("userid")%>님 🤗</span>
+			<span id="spantext"><%=session.getAttribute("user_name")%>님 🤗</span>
 			<form name="logout" method="post"
 				action="/P01_MEMBER/mem_models/member_dao.jsp">
 				<input type="hidden" name="actionType" value="LOGOUT"> <input

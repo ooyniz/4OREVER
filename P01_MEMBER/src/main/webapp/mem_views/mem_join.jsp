@@ -33,7 +33,7 @@
 	String driverName = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mariadb://localhost:3306/member_db";
 	String user = "root";
-	String passwd = "root";
+	String passwd = "password";
 	
 	Class.forName(driverName);
 	Connection con = DriverManager.getConnection(url, user, passwd);
@@ -82,41 +82,41 @@
 
 	<!-- 회원가입 시작 -->
 	<div id="join">
-		<form method="post" action="./member_dao.jsp">
+		<form action="../mem_models/member_dao.jsp" method="post" id="form">
 			<sup id="important">*</sup>ID<br>
-			<input type="text" placeholder="ID" name="userID" maxlength="20" @input="[idCheck(), canSubmitCheck()]" v-model="userId">
+			<input type="text" placeholder="ID" name="userID" maxlength="20" id="mem_id" @input="[idCheck(), canSubmitCheck()]" v-model="userId">
 				{{idCheckResult}}<br>
 				
 			<sup id="important">*</sup>PassWord<span style="color: gray"> &nbsp;&nbsp;&nbsp;비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span><br>
 			<input type="password"
-				v-model="password" placeholder="PassWord" name="userPW"
-				maxlength="20" @blur="passwordValid">
+				v-model="password" placeholder="PassWord" name="userPW" id="mem_pw" 
+				maxlength="20" @blur="[passwordValid(), canSubmitCheck()]">
 				<!-- blur 태그: 체크아웃 되는지 검사 -->
 			<div v-if="!passwordValidFlag">유효하지 않은 비밀번호 입니다.</div>
 			<br>
 		
 			<input
 				type="password" v-model="passwordCheck" placeholder="PassWord Check"
-				name="userPWck" maxlength="20" @blur="passwordCheckValid">
+				name="userPWck" maxlength="20" @blur="[passwordCheckValid(), canSubmitCheck()]">
 			<div v-if="!passwordCheckFlag">비밀번호가 동일하지 않습니다.</div>
 			<br>
 			
 			<sup id="important">*</sup>Name<br>
-			<input type="text" placeholder="Name" name="userName" maxlength="20"><br>
+			<input type="text" placeholder="Name" name="userName" maxlength="20" id="mem_name"><br>
 			
 			e-mail<br>
-			<input type="email" placeholder="e-mail" name="userMail" maxlength="20"><br>
+			<input type="email" placeholder="e-mail" name="userMail" maxlength="20" id="mem_email"><br>
 			
 			phone number<br>
-			<input type="text" placeholder="phone" name="userPhone" maxlength="20"><br>
+			<input type="text" placeholder="phone" name="userPhone" maxlength="20" id="mem_phone"><br>
 			
 			<sup id="important">*</sup>RRN<br>
-			<input type="text" name="userRRN1" minlength="6" maxlength="6" v-model="RRN1" @input="checkRRN()">
-			- <input type="password" name="userRRN2" minlength="7" maxlength="7" v-model="RRN2" @input="checkRRN()">
+			<input type="text" name="userRRN1" minlength="6" maxlength="6" id="mem_RRN1" v-model="RRN1" @input="[checkRRN(), canSubmitCheck()]">
+			- <input type="password" name="userRRN2" minlength="7" maxlength="7" id="mem_RRN2" v-model="RRN2" @input="[checkRRN(), canSubmitCheck()]">
 			{{rrnCheckResult}}<br><br>
 			
 			<input type="hidden" name="actionType" value="JOIN">
-			<input v-if="canSubmit" type="submit" value="제출">
+			<input type="submit" v-if="canSubmit" value="제출" @click="submit()">
 			<input v-else type="submit" value="제출" disabled="disabled"><br>
 		</form>
 	</div>
@@ -148,6 +148,7 @@
 			passwordValidFlag: true, // 비밀번호 유효성 검사 
 			passwordCheckFlag: true, // 비밀번호랑 비밀번호 확인이 똑같은지 검사
 		},
+		
 		methods: {
 			idCheck() {
 				let duplicate = false;
@@ -160,7 +161,10 @@
 			},
 
 			canSubmitCheck() {
-				if (this.idCheckResult == '사용 가능한 아이디입니다.') {
+				if (this.idCheckResult == '사용 가능한 아이디입니다.'
+						&& this.isValid == '유효한 주민번호 입니다'
+						&& this.passwordValidFlag
+						&& this.passwordCheckFlag) {
 					this.canSubmit = true;
 				} else {
 					this.canSubmit = false;
@@ -169,8 +173,8 @@
 			
 			checkRRN() {
 				// 모두 숫자이고, 길이가 맞으며, 유효성 검사를 통과할 때
-				if (!/[^0-9]/.test(this.RRN) && this.RRN.length == 13 && testRRN) {
-					this.isValid = '숫자'
+				if (!/[^0-9]/.test(this.RRN) && this.RRN.length == 13 && this.testRRN()) {
+					this.isValid = '유효한 주민번호 입니다'
 				} else {
 					this.isValid = '유효하지 않은 주민번호입니다.'
 				}
@@ -190,6 +194,26 @@
 			     	this.passwordCheckFlag = false
 			    }
 			},
+			
+			testRRN() {
+				if (this.RRN.length != 13) return false;
+				
+				let sum = 0;
+				for (let i = 0; i < this.RRN.length; i++) {
+					sum += this.checkNum[i] * (String)(this.RRN.charAt(i));
+				}
+				
+				if ((11 - (sum % 11)) % 10 == (String)(this.RRN.charAt(12))) {
+					return true;
+				}
+			},
+			
+			submit() {
+				// vue js 안에서 input type="submit" 작동 안됨
+				// 바닐라 js로 직접 클릭 이벤트를 만들어주니 됨
+				let temp = document.getElementMyId('form');
+				temp.submit();
+			}
 		},
 		
 		computed: {
@@ -204,18 +228,6 @@
 			},
 			RRN() {
 				return this.RRN1 + '' + this.RRN2;
-			},
-			testRRN() {
-				if (RRN.length != 13) return false;
-				
-				let sum = 0;
-				for (let i = 0; i < RRN.length; i++) {
-					sum += checkNum[i] * RRN.chatAt(i);
-				}
-				
-				if (11 - (sum % 11) == RRN.charAt(13)) {
-					return true;
-				}
 			},
 		},
 	});

@@ -29,7 +29,7 @@
 	String driverName = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mariadb://localhost:3306/member_db";
 	String user = "root";
-	String passwd = "root";
+	String passwd = "password";
 	
 	Class.forName(driverName);
 	Connection con = DriverManager.getConnection(url, user, passwd);
@@ -183,6 +183,33 @@
 			} else {
 				session.setAttribute("alert", "회원탈퇴에 실패하였습니다.");
 			}
+			break;
+			
+		case "JOIN":
+			userID = request.getParameter("userID");
+			userPW = request.getParameter("userPW");
+			userName = request.getParameter("userName");
+			userMail = request.getParameter("userMail");
+			userPhone = request.getParameter("userPhone");
+			userRRN = request.getParameter("userRRN1") + "-" + request.getParameter("userRRN2");
+			
+			sql = "INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES (?, ?, ?, ?, ?, ?);";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userID);
+			pstmt.setString(2, userPW);
+			pstmt.setString(3, userName);
+			pstmt.setString(4, userMail);
+			pstmt.setString(5, userPhone);
+			pstmt.setString(6, userRRN);
+			
+			sqlResult = pstmt.executeUpdate();
+			
+			if (sqlResult == 1) {
+				session.setAttribute("alert", "회원가입에 성공하였습니다");
+			} else {
+				session.setAttribute("alert", "회원가입에 실패하였습니다");
+			}
+			
 			break;
 	}
 %>
