@@ -10,9 +10,9 @@
 <body>
 	<%
 		String driverName = "org.mariadb.jdbc.Driver";
-		String url = "jdbc:mariadb://localhost:3306/member_db";
+		String url = "jdbc:mariadb://localhost:3307/member_db";
 		String user = "root";
-		String passwd = "root";
+		String passwd = "print(\"0926\")";
 		
 		Class.forName(driverName);
 		Connection con = DriverManager.getConnection(url, user, passwd);
@@ -95,7 +95,9 @@
 					<th>email</th>
 					<th>휴대폰 번호</th>
 					<th>회원등급</th>
+					<th>회원등급 수정</th>
 					<th>수정</th>
+					<th>탈퇴</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -108,8 +110,9 @@
 					mem_phone = rs.getString("mem_phone");
 					mem_class = rs.getString("mem_class");
 					
-					if (mem_class.equals("100")) mem_class = "일반 회원";
-					else if (mem_class.equals("200")) mem_class = "부관리자";
+					if (mem_class.equals("100")) mem_class = "신규 회원";
+					else if (mem_class.equals("150")) mem_class = "일반 회원";
+					else if (mem_class.equals("200")) mem_class = "열심 회원";
 					else if (mem_class.equals("300")) mem_class = "관리자";
 				%>
 				<tr>
@@ -120,18 +123,38 @@
 					<td><%=mem_phone%></td>
 					<td><%=mem_class%></td>
 					<%
-					// 부관리자가 관리자 못건들게
-					if ((int)session.getAttribute("user_class") == 200 && !mem_class.equals("관리자")) {
-						%>
-						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
-						<%
-					} else if ((int)session.getAttribute("user_class") == 300) {
-						%>
-						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
-						<%
+					if (mem_class.equals("300")) {
+					%>
+					
+					<%
+					} else {
+					%>
+					<td>						
+						<select id = "mem_class" name = "class" class = "mem_class">
+							<option value = "100">신규 회원</option>
+							<option value = "150">일반 회원</option>
+							<option value = "200">열심 회원</option>
+						</select>
+					</td>
+					<%
 					}
 					%>
+					<td>
+					<form action="../mem_models/member_dao.jsp" method="post">
+						<input type="hidden" value="EDIT_ADMIN" name="actionType">
+						<input type="hidden" value="<%=mem_num%>" name="userNum">
+						<input type="submit" value="수정">
+					</form>
+					</td>
+					<td>
+					<form action="../mem_models/member_dao.jsp" method="post">
+						<input type="hidden" value="DELETE_ADMIN" name="actionType">
+						<input type="hidden" value="<%=mem_num%>" name="userNum">
+						<input type="submit" value="탈퇴">
+					</form>
+					</td>
 				</tr>
+				
 				<%
 				}
 				%>
