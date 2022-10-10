@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<%
@@ -51,8 +52,8 @@
 	<!-- header.jsp 끝 -->
 	<h1>관리자 전용 회원수정 페이지</h1>
 	<hr>
-	<div>
-		<form action="../mem_models/member_dao.jsp" method="post">
+	<div id="adminEditPage">
+		<form action="../mem_models/member_dao.jsp" method="post" id="adminForm">
 			<label>회원No</label>
 			<input type="text" disabled="disabled" value="<%=mem_num%>">
 			<br>
@@ -105,14 +106,33 @@
 			
 			<input type="hidden" value="EDIT_ADMIN" name="actionType">
 			<input type="hidden" value="<%=mem_num%>" name="userNum">
-			<input type="submit" value="수정">
+			<input type="button" value="수정">
 		</form>
 		
-		<form action="../mem_models/member_dao.jsp" method="post">
+		<form action="../mem_models/member_dao.jsp" method="post" id="adminForm2">
 			<input type="hidden" value="DELETE_ADMIN" name="actionType">
 			<input type="hidden" value="<%=mem_num%>" name="userNum">
-			<input type="submit" value="탈퇴">
+			<input type="button" value="탈퇴">
 		</form>
 	</div>
+	<script>
+		let adminEditPage = new Vue({
+			el: '#adminEditPage',
+			methods: {
+				editSubmitCheck() {
+					if (confirm("정말 수정하시겠습니까?")) {
+						let form = document.getElementById('adminForm');
+						form.submit();
+					}
+				},
+				deleteSubmitCheck() {
+					if (confirm("정말 삭제하시겠습니까?")) {
+						let form2 = document.getElementById('adminForm2');
+						form2.submit();
+					}
+				},
+			},
+		})
+	</script>
 </body>
 </html>
