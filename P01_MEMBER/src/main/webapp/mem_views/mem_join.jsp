@@ -33,7 +33,7 @@
 	String driverName = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mariadb://localhost:3306/member_db";
 	String user = "root";
-	String passwd = "password";
+	String passwd = "root";
 	
 	Class.forName(driverName);
 	Connection con = DriverManager.getConnection(url, user, passwd);
@@ -65,7 +65,6 @@
 		 <%
 	 }
 	 %>
-	<hr>
 	<!-- header 시작 -->
 	<header>
 		<!-- include file="../header.jsp" 시작 -->
@@ -94,7 +93,9 @@
 				maxlength="20" @blur="passwordValid">
 				<!-- blur 태그: 체크아웃 되는지 검사 -->
 			<div v-if="!passwordValidFlag">유효하지 않은 비밀번호 입니다.</div>
-			<sup id="important">*</sup>PassWord Check<br> <input
+			<br>
+		
+			<input
 				type="password" v-model="passwordCheck" placeholder="PassWord Check"
 				name="userPWck" maxlength="20" @blur="passwordCheckValid">
 			<div v-if="!passwordCheckFlag">비밀번호가 동일하지 않습니다.</div>
