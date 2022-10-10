@@ -4,10 +4,10 @@
 [AI가 만든 팀의 아이콘(수정해야함)](https://www.shopify.com/tools/logo-maker)  
 
 ## 🔍 목차 (목차 링크 추가)
-1. [🎤 소개](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#%EA%B8%B0%EB%8A%A5) 
-2. [:clipboard: 개발 환경](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#%EA%B8%B0%EB%8A%A5)
-3. [:bulb: 규칙](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#%EA%B8%B0%EB%8A%A5)
-4. [:notebook: 과정](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#%EA%B8%B0%EB%8A%A5)
+1. [🎤 소개](https://github.com/ooyniz/4OREVER/blob/main/P01_MEMBER/README.md#-%EC%86%8C%EA%B0%9C) 
+2. [:clipboard: 개발 환경](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#clipboard-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD)
+3. [:bulb: 규칙](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#bulb-%EA%B7%9C%EC%B9%99)
+4. [:notebook: 과정](https://github.com/ooyniz/4OREVER/tree/main/P01_MEMBER#notebook-%EA%B3%BC%EC%A0%95)
 
 ## 🎤 소개
 ### 회원관리 시스템 제작을 위한 팀프로젝트 (수정해야함)
