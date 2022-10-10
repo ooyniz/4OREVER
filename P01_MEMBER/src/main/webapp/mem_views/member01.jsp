@@ -16,13 +16,45 @@
 	<%@ include file="../header.jsp"%>
 	<!-- End of header -->
 
-	<!-- 이미지 -->
-
-	<div class="box">
-		<span> <img class="profile" src="../images/member01.jpg"
-			width="1024" />
-		</span>
-	</div>
+	<!-- 내용 -->
+	<section class="section-about">
+		<a name="about"></a>
+		<h2 class="font1">About 왕인성🧔🏻‍♀️</h2>
+		<div class="cont-about">
+			<div class="memcontainer">
+				<div class="memimages">
+					<img src="../images/member01.jpg" alt="내 사진" />
+				</div>
+			</div>
+			<div class="info-about">
+				<dl class="txt-about">
+					<div>
+						<dt>이름</dt>
+						<dd>왕인성</dd>
+					</div>
+					<div>
+						<dt>생년월일</dt>
+						<dd></dd>
+					</div>
+					<div>
+						<dt>거주지</dt>
+						<dd>대구 북구</dd>
+					</div>
+					<div>
+						<dt>목표</dt>
+						<dd></dd>
+					</div>
+					<div>
+						<dt>github</dt>
+						<dd>
+							<a href="https://github.com/tkdrms4585" target="_blank"><img
+								src="../images/memgithub.png" height="30"></a>
+						</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
 
 	<!-- Start of footer -->
 	<%@ include file="../footer.jsp"%>
