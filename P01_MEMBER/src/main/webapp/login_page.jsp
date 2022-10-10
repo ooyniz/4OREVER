@@ -69,7 +69,7 @@ a:hover {
 						<img src="/P01_MEMBER/images/m01.jpg" class="card-img-top"
 							alt="member01">
 						<div class="card-body">
-							<p class="card-text">풀스택 개발자<br>왕인성</p>
+							<p class="card-text">변화를 추구하는 개발자<br>왕인성</p>
 						</div>
 					</div>
 				</a>
@@ -127,7 +127,7 @@ a:hover {
 						<img src="/P01_MEMBER/images/m05.jpg" class="card-img-top"
 							alt="member05">
 						<div class="card-body">
-							<p class="card-text">개발자<br>송성혁</p>
+							<p class="card-text">성실한 개발자<br>송성혁</p>
 						</div>
 					</div>
 				</a>
