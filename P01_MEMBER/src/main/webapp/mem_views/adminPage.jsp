@@ -5,7 +5,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지</title>
+<title>4OREVER :: 관리자 페이지</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
+<!-- 부트스트랩 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<%
@@ -68,9 +84,8 @@
 <!-- header.jsp 시작 -->
 <%@ include file="../header.jsp"%>
 <!-- header.jsp 끝 -->
-
+	<br>
 	<h1>관리자 페이지</h1>
-	<hr>
 	
 	<form method="post" action="./adminPage.jsp">
 	페이지당 표시할 줄 : 
@@ -85,8 +100,8 @@
 	</form>
 	<br>
 	
-	<div>
-		<table border="2">
+	<div id="adminPage">
+		<table class="table table-striped" border="2">
 			<thead>
 				<tr>
 					<th>회원No</th>
@@ -95,7 +110,9 @@
 					<th>email</th>
 					<th>휴대폰 번호</th>
 					<th>회원등급</th>
+					<th>회원등급 수정</th>
 					<th>수정</th>
+					<th>탈퇴</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -108,8 +125,9 @@
 					mem_phone = rs.getString("mem_phone");
 					mem_class = rs.getString("mem_class");
 					
-					if (mem_class.equals("100")) mem_class = "일반 회원";
-					else if (mem_class.equals("200")) mem_class = "부관리자";
+					if (mem_class.equals("100")) mem_class = "신규 회원";
+					else if (mem_class.equals("150")) mem_class = "일반 회원";
+					else if (mem_class.equals("200")) mem_class = "열심 회원";
 					else if (mem_class.equals("300")) mem_class = "관리자";
 				%>
 				<tr>
@@ -120,25 +138,46 @@
 					<td><%=mem_phone%></td>
 					<td><%=mem_class%></td>
 					<%
-					// 부관리자가 관리자 못건들게
-					if ((int)session.getAttribute("user_class") == 200 && !mem_class.equals("관리자")) {
-						%>
-						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
-						<%
-					} else if ((int)session.getAttribute("user_class") == 300) {
-						%>
-						<td><a href="./admin_edit.jsp?mem_num=<%=mem_num%>">수정</a></td>
-						<%
+					if (mem_class.equals("300")) {
+					%>
+					
+					<%
+					} else {
+					%>
+					<td>
+						<select id = "mem_class" name = "userClass" class = "mem_class">
+							<option value = "100">신규 회원</option>
+							<option value = "150">일반 회원</option>
+							<option value = "200">열심 회원</option>
+						</select>
+					</td>
+					<%
 					}
 					%>
+					
+					<td>
+					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm">
+						<input type="hidden" value="EDIT_ADMIN" name="actionType">
+						<input type="hidden" value="<%=mem_num%>" name="userNum">
+						<input type="button" value="수정" @click="editSubmitCheck()">
+					</form>
+					</td>
+					<td>
+					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm2">
+						<input type="hidden" value="DELETE_ADMIN" name="actionType">
+						<input type="hidden" value="<%=mem_num%>" name="userNum">
+						<input type="button" value="탈퇴" @click="deleteSubmitCheck()">
+					</form>
+					</td>
 				</tr>
+				
 				<%
 				}
 				%>
 			</tbody>
 		</table>
 	</div>
-	
+	<div class="d-flex justify-content-center">
 	<a href="./adminPage.jsp?currentPageNo=0&limitCnt=<%=limitCnt%>">[FIRST]</a>
 	<%
 	// 화면에 표기되는 페이지랑 내부에 동작하는 페이지랑 다름 주의 
@@ -209,10 +248,31 @@
 	}
 	%>
 	<a href="./adminPage.jsp?currentPageNo=<%=(pageCnt-1)%>&limitCnt=<%=limitCnt%>">[END]</a>
+	</div>
 	<br>
 	
 <!-- footer.jsp 시작 --> 
 <%@ include file="../footer.jsp" %>
 <!-- footer.jsp 끝 -->
+
+<script>
+		let adminPage = new Vue({
+			el: '#adminPage',
+			methods: {
+				editSubmitCheck() {
+					if (confirm("정말 수정하시겠습니까?")) {
+						let form = document.getElementById('adminForm');
+						form.submit();
+					}
+				},
+				deleteSubmitCheck() {
+					if (confirm("정말 삭제하시겠습니까?")) {
+						let form2 = document.getElementById('adminForm2');
+						form2.submit();
+					}
+				},
+			},
+		})
+	</script>
 </body>
 </html>

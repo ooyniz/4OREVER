@@ -7,6 +7,21 @@
 <title>네비게이션 바</title>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
+<!-- style -->
+<style>
+@font-face {
+	font-family: 'NeoDunggeunmo';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+ul,button {
+	font-family: 'NeoDunggeunmo';
+}
+</style>
 <body>
 	<hr>
 
@@ -34,13 +49,13 @@
 						href="/P01_MEMBER/mem_views/member05.jsp">송성혁🧑🏻</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/P01_MEMBER/mem_views/member06.jsp">조규태🧒🏻</a></li>
-
 				</ul>
 				<button class="btn btn-outline-success m-1" type="button"
 					onclick="location.href='/P01_MEMBER/mem_views/mem_edit.jsp' ">정보수정</button>
 
 				<!-- 여기에 if else넣어서 이동링크 ㄱ -->
-				<button v-if="userClass == 200 || userClass == 300"
+				<button class="btn btn-outline-success m-1" type="button"
+					v-if="userClass == 300"
 					onclick="location.href='/P01_MEMBER/mem_views/adminPage.jsp' ">관리자페이지</button>
 			</div>
 		</div>

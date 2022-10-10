@@ -5,14 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 수정 및 삭제</title>
-
+<title>4OREVER :: 회원 수정 및 삭제</title>
+<!-- 아이콘 -->
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
 <!-- 부트스트랩 -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
 	crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<%
@@ -54,14 +59,14 @@
 	<!-- header.jsp 시작 -->
 	<%@ include file="../header.jsp"%>
 	<!-- header.jsp 끝 -->
+	<br>
 	<h1>회원 수정 페이지</h1>
-	<hr>
-	<div>
-		<form action="../mem_models/member_dao.jsp" method="post">
+	<div id="page">
+		<form action="../mem_models/member_dao.jsp" method="post" id="form">
 			<label>ID</label>
 			<input type="text" disabled="disabled" value="<%=mem_id%>">
 			<br>
-			
+			</tr>
 			<label for="password">Password</label>
 			<input type="password" id="password" value="<%=mem_pw%>" name="userPW">
 			<br>
@@ -87,17 +92,35 @@
 			<br>
 			
 			<input type="hidden" value="EDIT" name="actionType">
-			<input type="submit" value="수정">
+			<input type="button" value="수정" @click="editSubmitCheck()">
 		</form>
-		
-		<form action="../mem_models/member_dao.jsp" method="post">
+		<form action="../mem_models/member_dao.jsp" method="post" id="form2">
 			<input type="hidden" value="DELETE" name="actionType">
-			<input type="submit" value="탈퇴">
+			<input type="button" value="탈퇴" @click="deleteSubmitCheck()">
 		</form>
 	</div>
 
 	<!-- footer.jsp 시작 -->
 	<%@ include file="../footer.jsp"%>
 	<!-- footer.jsp 끝 -->
+	<script>
+		let editPage = new Vue({
+			el: '#page',
+			methods: {
+				editSubmitCheck() {
+					if (confirm("정말 수정하시겠습니까?")) {
+						let form = document.getElementById('form');
+						form.submit();
+					}
+				},
+				deleteSubmitCheck() {
+					if (confirm("정말 삭제하시겠습니까?")) {
+						let form2 = document.getElementById('form2');
+						form2.submit();
+					}
+				},
+			},
+		})
+	</script>
 </body>
 </html>

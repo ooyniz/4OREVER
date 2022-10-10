@@ -9,17 +9,49 @@
 <link rel="icon" type="image/x-icon"
 	href="/P01_MEMBER/images/favicon.png" />
 <!-- css -->
-<link rel = "stylesheet" href= "/P01_MEMBER/CSS/memberstyles.css"/>
+<link rel = "stylesheet" href= "/P01_MEMBER/css/memberstyles.css"/>
 </head>
 <body>
 	<!-- Start of header -->
 	<%@ include file="../header.jsp"%>
 	<!-- End of header -->
 	
-	<!-- 이미지 -->
-	<div class="box">
-		<img class="profile" src="../images/member04.jpg" width="1024" />
-	</div>
+	<!-- 내용 -->
+	<section class="section-about">
+		<a name="about"></a>
+		<h2>About 노태권👨🏻‍🦱</h2>
+		<div class="cont-about">
+			<div class="memcontainer">
+				<div class="memimages">
+					<img src="../images/member04.jpg" alt="내 사진" />
+				</div>
+			</div>
+			<div class="info-about">
+				<dl class="txt-about">
+					<div>
+						<dt>이름</dt>
+						<dd>노태권</dd>
+					</div>
+					<div>
+						<dt>생년월일</dt>
+						<dd>00.09.26</dd>
+					</div>
+					<div>
+						<dt>거주지</dt>
+						<dd>대구 북구</dd>
+					</div>
+					<div>
+						<dt>목표</dt>
+						<dd>도전하며 배우는 개발자가 되고 싶습니다.</dd>
+					</div>
+					<div>
+						<dt>github</dt>
+						<dd><a href="https://github.com/NoTaeGwon" target= "_blank"><img src="../images/memgithub.png" height="30"></a></dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
 	
 	<!-- Start of footer -->
 	<%@ include file="../footer.jsp"%>
