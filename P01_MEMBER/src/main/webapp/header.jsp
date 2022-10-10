@@ -54,7 +54,6 @@
 			}
 		}
 %>
-<i class="fas fa-brands fa-github"></i>
 </table>		
 <%
 		if(session.getAttribute("loginState").equals("login")){
