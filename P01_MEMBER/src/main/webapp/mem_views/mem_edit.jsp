@@ -19,7 +19,7 @@
 		String driverName = "org.mariadb.jdbc.Driver";
 		String url = "jdbc:mariadb://localhost:3306/member_db";
 		String user = "root";
-		String passwd = "root";
+		String passwd = "password";
 		
 		Class.forName(driverName);
 		Connection con = DriverManager.getConnection(url, user, passwd);
