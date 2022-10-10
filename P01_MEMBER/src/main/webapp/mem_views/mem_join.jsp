@@ -84,23 +84,34 @@
 	<!-- 회원가입 시작 -->
 	<div id="join">
 		<form method="post" action="./member_dao.jsp">
-			<sup id="important">*</sup>ID<br> <input type="text"
-				placeholder="ID" name="userID" maxlength="20" @input="idCheck()" v-model="userId">
-				{{idCheckResult}}<br> <sup id="important">*</sup>PassWord<br>
-			<input type="password" placeholder="PassWord" name="userPW"
-				maxlength="20"><br> <sup id="important">*</sup>PassWord
-			Check<br> <input type="password" placeholder="PassWord"
-				name="userPW" maxlength="20"> <span style="color: gray">비밀번호는
-				6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span> <br> <sup id="important">*</sup>Name<br>
+			<sup id="important">*</sup>ID<br>
+			<input type="text" placeholder="ID" name="userID" maxlength="20" @input="[idCheck(), canSubmitCheck()]" v-model="userId">
+				{{idCheckResult}}<br>
+				
+			<sup id="important">*</sup>PassWord<br>
+			<input type="password" placeholder="PassWord" name="userPW" maxlength="20"><br> <sup id="important">
+			
+			*</sup>PassWord Check<br>
+			<input type="password" placeholder="PassWord" name="userPW" maxlength="20">
+			<span style="color: gray">비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다. </span> <br>
+			
+			<sup id="important">*</sup>Name<br>
 			<input type="text" placeholder="Name" name="userName" maxlength="20"><br>
-			e-mail<br> <input type="email" placeholder="e-mail"
-				name="userMail" maxlength="20"><br> phone number<br>
-			<input type="text" placeholder="phone" name="userPhone"
-				maxlength="20"><br> <sup id="important">*</sup>RRN<br>
-			<input type="text" name="userRRN" maxlength="20"> - <input
-				type="password" name="userRRN" maxlength="20"><br> <br>
-			<input type="hidden" name="actionType" value="JOIN"> <input
-				type="submit" value="제출"><br>
+			
+			e-mail<br>
+			<input type="email" placeholder="e-mail" name="userMail" maxlength="20"><br>
+			
+			phone number<br>
+			<input type="text" placeholder="phone" name="userPhone" maxlength="20"><br>
+			
+			<sup id="important">*</sup>RRN<br>
+			<input type="text" name="userRRN1" minlength="6" maxlength="6" v-model="RRN1" @input="checkRRN()">
+			- <input type="password" name="userRRN2" minlength="7" maxlength="7" v-model="RRN2" @input="checkRRN()">
+			{{rrnCheckResult}}<br><br>
+			
+			<input type="hidden" name="actionType" value="JOIN">
+			<input v-if="canSubmit" type="submit" value="제출">
+			<input v-else type="submit" value="제출" disabled="disabled"><br>
 		</form>
 	</div>
 	<!-- 회원가입 끝 -->
@@ -115,12 +126,17 @@
 	
 	
 	<!-- 아이디 중복 검사용 스크립트 -->
-	<script>
+	<script>	
 	let app = new Vue({
 		el: '#join',
 		data: {
 			userId : '',
-			isDuplicate : '아이디가 중복이 아닙니다.',
+			isDuplicate : '사용 가능한 아이디입니다.',
+			canSubmit : false,
+			checkNum : [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5, 0],
+			RRN1 : '',
+			RRN2 : '',
+			isValid : '유효하지 않은 주민번호입니다.',
 		},
 		methods: {
 			idCheck() {
@@ -130,13 +146,51 @@
 				}
 				
 				if (duplicate) this.isDuplicate = '중복된 아이디입니다.';
-				else this.isDuplicate = '아이디가 중복이 아닙니다.';
+				else this.isDuplicate = '사용 가능한 아이디입니다.';
+			},
+
+			canSubmitCheck() {
+				if (this.idCheckResult == '사용 가능한 아이디입니다.') {
+					this.canSubmit = true;
+				} else {
+					this.canSubmit = false;
+				}
+			},
+			
+			checkRRN() {
+				// 모두 숫자이고, 길이가 맞으며, 유효성 검사를 통과할 때
+				if (!/[^0-9]/.test(this.RRN) && this.RRN.length == 13 && testRRN) {
+					this.isValid = '숫자'
+				} else {
+					this.isValid = '유효하지 않은 주민번호입니다.'
+				}
 			},
 		},
 		computed: {
 			idCheckResult() {
+				if (this.userId.length < 5) {
+					this.isDuplicate = '5글자 이상 입력해주세요';
+				}
 				return this.isDuplicate;
-			}
+			},
+			rrnCheckResult() {
+				return this.isValid;
+			},
+			RRN() {
+				return this.RRN1 + '' + this.RRN2;
+			},
+			testRRN() {
+				if (RRN.length != 13) return false;
+				
+				let sum = 0;
+				for (let i = 0; i < RRN.length; i++) {
+					sum += checkNum[i] * RRN.chatAt(i);
+				}
+				
+				if (11 - (sum % 11) == RRN.charAt(13)) {
+					return true;
+				}
+			},
 		},
 	});
 	</script>
