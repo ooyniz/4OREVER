@@ -17,14 +17,13 @@
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 	rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="P01_MEMBER/css/styles.css" rel="stylesheet" />\
+<link href="P01_MEMBER/css/styles.css" rel="stylesheet" />
 <style>
 #footer-a {
   text-align: center;
   text-decoration: none; /* 링크의 밑줄 제거 */
   color: inherit; /* 링크의 색상 제거 */
 }
-출처: https://hyunjungchoi.tistory.com/44 [행뽁🐥:티스토리]
 </style>
 </head>
 <body>
