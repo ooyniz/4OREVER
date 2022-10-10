@@ -3,11 +3,11 @@
 ![[팀 마크]](src/main/webapp/images/4orever.png)
 [AI가 만든 팀의 아이콘(수정해야함)](https://www.shopify.com/tools/logo-maker)  
 
-## 🔍 목차
-1. [🎤 소개](#-%EC%A1%B0%EC%9B%90-%EC%86%8C%EA%B0%9C) 
-2. [:clipboard: 개발 환경](#-%ED%8C%80%EC%9B%8C%ED%81%AC-%ED%96%A5%EC%83%81-%EA%B3%84%ED%9A%8D)
-3. [:bulb: 규칙](#-%ED%8C%80%EC%9B%8C%ED%81%AC-%ED%96%A5%EC%83%81-%EA%B3%84%ED%9A%8D)
-4. [:notebook: 과정](#-%EC%9E%90%EC%9C%A0-%EC%9D%98%EA%B2%AC)
+## 🔍 목차 (목차 링크 추가)
+1. [🎤 소개](#-🎤-소개) 
+2. [:clipboard: 개발 환경](#-:clipboard:-개발환경)
+3. [:bulb: 규칙](#-:bulb:-규칙)
+4. [:notebook: 과정](#-:notebook:-과정)
 
 ## 🎤 소개
 ### 회원관리 시스템 제작을 위한 팀프로젝트 (수정해야함)
@@ -71,13 +71,23 @@ ex) CamelCase
 * @return N
 */
 ```
+
 ## :notebook: 과정
--
--
--
--
+
+### 스토리 보드
 -
 
+### 설계 구조도
+-
+
+### 깃허브 스터디
+-
+
+### 오류 공유
+-
+
+### 실제 코딩
+-
 
 <br>
 👑🧔🏻‍♀️[인성] 
