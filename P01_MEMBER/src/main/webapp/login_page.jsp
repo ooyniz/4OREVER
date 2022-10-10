@@ -127,7 +127,7 @@ a:hover {
 						<img src="/P01_MEMBER/images/m05.jpg" class="card-img-top"
 							alt="member05">
 						<div class="card-body">
-							<p class="card-text">개발자<br>송성혁</p>
+							<p class="card-text">성실한 개발자<br>송성혁</p>
 						</div>
 					</div>
 				</a>
