@@ -13,6 +13,7 @@
 	rel="stylesheet"
 	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
 	crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<%
@@ -56,8 +57,8 @@
 	<!-- header.jsp 끝 -->
 	<h1>회원 수정 페이지</h1>
 	<hr>
-	<div>
-		<form action="../mem_models/member_dao.jsp" method="post">
+	<div id="page">
+		<form action="../mem_models/member_dao.jsp" method="post" id="form">
 			<label>ID</label>
 			<input type="text" disabled="disabled" value="<%=mem_id%>">
 			<br>
@@ -87,17 +88,36 @@
 			<br>
 			
 			<input type="hidden" value="EDIT" name="actionType">
-			<input type="submit" value="수정">
+			<input type="button" value="수정" @click="editSubmitCheck()">
 		</form>
 		
-		<form action="../mem_models/member_dao.jsp" method="post">
+		<form action="../mem_models/member_dao.jsp" method="post" id="form2">
 			<input type="hidden" value="DELETE" name="actionType">
-			<input type="submit" value="탈퇴">
+			<input type="button" value="탈퇴" @click="deleteSubmitCheck()">
 		</form>
 	</div>
 
 	<!-- footer.jsp 시작 -->
 	<%@ include file="../footer.jsp"%>
 	<!-- footer.jsp 끝 -->
+	<script>
+		let editPage = new Vue({
+			el: '#page',
+			methods: {
+				editSubmitCheck() {
+					if (confirm("정말 수정하시겠습니까?")) {
+						let form = document.getElementById('form');
+						form.submit();
+					}
+				},
+				deleteSubmitCheck() {
+					if (confirm("정말 삭제하시겠습니까?")) {
+						let form2 = document.getElementById('form2');
+						form2.submit();
+					}
+				},
+			},
+		})
+	</script>
 </body>
 </html>

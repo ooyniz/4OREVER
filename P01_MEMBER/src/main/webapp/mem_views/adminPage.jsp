@@ -6,11 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<%
 		String driverName = "org.mariadb.jdbc.Driver";
-		String url = "jdbc:mariadb://localhost:3307/member_db";
+		String url = "jdbc:mariadb://localhost:3306/member_db";
 		String user = "root";
 		String passwd = "password";
 		
@@ -85,7 +86,7 @@
 	</form>
 	<br>
 	
-	<div>
+	<div id="adminPage">
 		<table border="2">
 			<thead>
 				<tr>
@@ -129,8 +130,8 @@
 					<%
 					} else {
 					%>
-					<td>						
-						<select id = "mem_class" name = "class" class = "mem_class">
+					<td>
+						<select id = "mem_class" name = "userClass" class = "mem_class">
 							<option value = "100">신규 회원</option>
 							<option value = "150">일반 회원</option>
 							<option value = "200">열심 회원</option>
@@ -139,18 +140,19 @@
 					<%
 					}
 					%>
+					
 					<td>
-					<form action="../mem_models/member_dao.jsp" method="post">
+					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm">
 						<input type="hidden" value="EDIT_ADMIN" name="actionType">
 						<input type="hidden" value="<%=mem_num%>" name="userNum">
-						<input type="submit" value="수정">
+						<input type="button" value="수정" @click="editSubmitCheck()">
 					</form>
 					</td>
 					<td>
-					<form action="../mem_models/member_dao.jsp" method="post">
+					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm2">
 						<input type="hidden" value="DELETE_ADMIN" name="actionType">
 						<input type="hidden" value="<%=mem_num%>" name="userNum">
-						<input type="submit" value="탈퇴">
+						<input type="button" value="탈퇴" @click="deleteSubmitCheck()">
 					</form>
 					</td>
 				</tr>
@@ -237,5 +239,25 @@
 <!-- footer.jsp 시작 --> 
 <%@ include file="../footer.jsp" %>
 <!-- footer.jsp 끝 -->
+
+<script>
+		let adminPage = new Vue({
+			el: '#adminPage',
+			methods: {
+				editSubmitCheck() {
+					if (confirm("정말 수정하시겠습니까?")) {
+						let form = document.getElementById('adminForm');
+						form.submit();
+					}
+				},
+				deleteSubmitCheck() {
+					if (confirm("정말 삭제하시겠습니까?")) {
+						let form2 = document.getElementById('adminForm2');
+						form2.submit();
+					}
+				},
+			},
+		})
+	</script>
 </body>
 </html>
