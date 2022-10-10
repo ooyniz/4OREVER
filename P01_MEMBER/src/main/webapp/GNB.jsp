@@ -20,26 +20,26 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/P01_MEMBER/index.jsp">Home</a></li>
+						aria-current="page" href="/P01_MEMBER/index.jsp">Home🏠</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member01.jsp">왕인성</a></li>
+						href="/P01_MEMBER/mem_views/member01.jsp">왕인성🧔🏻‍♀️</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member02.jsp">김정수</a></li>
+						href="/P01_MEMBER/mem_views/member02.jsp">곽유진👧🏻</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member03.jsp">곽유진</a></li>
+						href="/P01_MEMBER/mem_views/member03.jsp">김정수👦🏻</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member04.jsp">노태권</a></li>
+						href="/P01_MEMBER/mem_views/member04.jsp">노태권👨🏻‍🦱</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member05.jsp">조규태</a></li>
+						href="/P01_MEMBER/mem_views/member05.jsp">송성혁🧑🏻</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/P01_MEMBER/mem_views/member06.jsp">송성혁</a></li>
+						href="/P01_MEMBER/mem_views/member06.jsp">조규태🧒🏻</a></li>
 
 				</ul>
-				<button class="btn btn-outline-success" type="button"
+				<button class="btn btn-outline-success m-1" type="button"
 					onclick="location.href='/P01_MEMBER/mem_views/mem_edit.jsp' ">정보수정</button>
 
 				<!-- 여기에 if else넣어서 이동링크 ㄱ -->
-				<button class="btn btn-outline-success" type="button"
+				<button class="btn btn-outline-success m-1" type="button"
 					onclick="location.href='/P01_MEMBER/mem_views/adminPage.jsp' ">관리자페이지</button>
 			</div>
 		</div>
