@@ -26,6 +26,13 @@
 	<%@ include file="./header.jsp"%>
 	<!-- header.jsp 끝 -->
 	<%
+	if (session.getAttribute("alert") != null) {
+		%>
+		<script>alert('<%=session.getAttribute("alert")%>')</script>
+		<%
+		session.setAttribute("alert", null);
+	}
+	
 	if (session.getAttribute("loginState").equals("login")) {
 	%>
 	<jsp:include page="./login_page.jsp" />
