@@ -20,47 +20,57 @@
 <body>
 <table>
 	 <a href="/P01_MEMBER/index.jsp"><img src="/P01_MEMBER/images/nobg_banner.png"  width="40%" height="40%" /></a>
+<table>
+ <tr>
+    <td><img src="/P01_MEMBER/images/logo2.png"  width="150" height="150" /></td> 
+    <td><img src="/P01_MEMBER/images/4orever.png" width="500" height="150"  /></td> 
+    <td>
+   <%
+      if (session.isNew()) {
+      session.setAttribute("loginState", "logout");
+      session.setAttribute("user_num", 0);
+      session.setAttribute("user_name", null);
+      session.setAttribute("user_class", 0);
+      session.setAttribute("alert", null);
+      }
+      if (session.getAttribute("loginState").equals("login")) {
+   %>
+      <%=session.getAttribute("user_name")%>님 로그인중.
+      <form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
+        <input type="hidden" name="actionType" value="LOGOUT">
+        <input class="btn btn-outline-success" type="submit" value="로그아웃">
+      </form> 
 <%
-		if( session.isNew()) {
-			session.setAttribute("loginState", "logout");
-			session.setAttribute("userid", null);
-			session.setAttribute("userpw", null);
-		}
-		if(session.getAttribute("loginState").equals("login")){
+      }
+      else{
+%>       
+       <form name="login" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
+          아이디 : <input type="text" name="userid" size="10">
+          비밀번호 : <input type="password" name="passwd" size="10">
+          <input type="hidden" name="actionType" value="LOGIN">
+          <input class="btn btn-outline-success" type="submit" value="로그인">
+          
+       </form>
+       <button class="btn btn-outline-success" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
+<%
+         if(session.getAttribute("loginState").equals("errorID")){
+            out.print("[사용자ID오류]");
+         }
+         
+         if(session.getAttribute("loginState").equals("errorPW")){
+            out.print("[사용자PW오류]");
+         }
+      }
+%>      
+    </td>
+ </tr>
+</table>
+<%
+      if(session.getAttribute("loginState").equals("login")){
 %>
-		<b><%=session.getAttribute("userid")%>님 🤗</b>
-		<form name="logout" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
-		  <input type="hidden" name="actionType" value="LOGOUT">
-		  <input class="btn btn-outline-success m-2" type="submit" value="로그아웃">
-		</form> 
+         <%@ include file= "./GNB.jsp" %>
 <%
-		}
-		else{
-%>		 
-		 <form name="login" method="post" action="/P01_MEMBER/mem_models/member_dao.jsp">
-		    아이디 : <input type="text" name="userid" size="10">
-		    비밀번호 : <input type="password" name="passwd" size="10">
-		    <input type="hidden" name="actionType" value="LOGIN">
-		    <input class="btn btn-outline-success m-2" type="submit" value="로그인">
-		 </form>
-		 <button class="btn btn-outline-success m-" type="button" onclick="location.href='/P01_MEMBER/mem_views/mem_join.jsp' ">회원가입</button>
-<%
-			if(session.getAttribute("loginState").equals("errorID")){
-				out.print("[사용자ID오류]");
-			}
-			
-			if(session.getAttribute("loginState").equals("errorPW")){
-				out.print("[사용자PW오류]");
-			}
-		}
-%>
-</table>		
-<%
-		if(session.getAttribute("loginState").equals("login")){
-%>
-			<%@ include file= "./GNB.jsp" %>
-<%
-		}
+      }
 %>
 <hr> 
 </body>
