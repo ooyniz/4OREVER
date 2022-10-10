@@ -11,6 +11,16 @@
 	href="/P01_MEMBER/images/favicon.png" />
 <!-- css -->
 <link rel="stylesheet" href="/P01_MEMBER/css/memedit.css" />
+<!-- 부트스트랩 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
@@ -91,7 +101,7 @@
 	<br>
 	
 	<div id="adminPage">
-		<table border="2">
+		<table class="table table-striped" border="2">
 			<thead>
 				<tr>
 					<th>회원No</th>
@@ -167,7 +177,7 @@
 			</tbody>
 		</table>
 	</div>
-	
+	<div class="d-flex justify-content-center">
 	<a href="./adminPage.jsp?currentPageNo=0&limitCnt=<%=limitCnt%>">[FIRST]</a>
 	<%
 	// 화면에 표기되는 페이지랑 내부에 동작하는 페이지랑 다름 주의 
@@ -238,6 +248,7 @@
 	}
 	%>
 	<a href="./adminPage.jsp?currentPageNo=<%=(pageCnt-1)%>&limitCnt=<%=limitCnt%>">[END]</a>
+	</div>
 	<br>
 	
 <!-- footer.jsp 시작 --> 

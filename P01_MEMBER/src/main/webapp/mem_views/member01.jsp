@@ -34,7 +34,7 @@
 					</div>
 					<div>
 						<dt>생년월일</dt>
-						<dd></dd>
+						<dd>95.02.20</dd>
 					</div>
 					<div>
 						<dt>거주지</dt>
@@ -42,7 +42,7 @@
 					</div>
 					<div>
 						<dt>목표</dt>
-						<dd></dd>
+						<dd>열심히하는 사람의 도움이 되고 싶습니다.</dd>
 					</div>
 					<div>
 						<dt>github</dt>
