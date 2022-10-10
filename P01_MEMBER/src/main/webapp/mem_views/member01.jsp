@@ -9,7 +9,7 @@
 <link rel="icon" type="image/x-icon"
 	href="/P01_MEMBER/images/favicon.png" />
 <!-- css -->
-<link rel="stylesheet" href="/P01_MEMBER/CSS/memberstyles.css" />
+<link rel="stylesheet" href="/P01_MEMBER/css/memberstyles.css" />
 </head>
 <body>
 	<!-- Start of header -->
@@ -17,12 +17,10 @@
 	<!-- End of header -->
 
 	<!-- 이미지 -->
-	<div>
-		<div class="box">
-			<img class="profile" src="../images/member01.jpg" width="1024" />
-		</div>
-
+	<div class="box">
+		<img class="profile" src="../images/member01.jpg" width="1024" />
 	</div>
+
 	<!-- Start of footer -->
 	<%@ include file="../footer.jsp"%>
 	<!-- End of footer -->
