@@ -1,0 +1,138 @@
+-- 데이터베이스 생성
+DROP DATABASE member_db;
+CREATE DATABASE member_db;
+
+-- 데이터베이스 접속
+USE member_db;
+
+-- 테이블 생성
+CREATE TABLE member (
+	mem_num INT NOT NULL AUTO_INCREMENT,
+	mem_id VARCHAR(30) NOT NULL UNIQUE,
+	mem_pw VARCHAR(30) NOT NULL,
+	mem_name VARCHAR(30) NOT NULL,
+	mem_email VARCHAR(60),
+	mem_phone VARCHAR(30),
+	mem_RRN VARCHAR(30) NOT NULL UNIQUE,
+	mem_class INT NOT NULL DEFAULT 100,
+	mem_regDate TIMESTAMP DEFAULT NOW(),
+	PRIMARY KEY (mem_num)
+);
+
+-- 기본 계정 생성
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN, mem_class)
+VALUES ('admin', 'admin', 'Admin', '', '', '1234561234567', '300');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN, mem_class)
+VALUES ('guest', 'guest', 'Guest', '', '', '1234561234568', '100');
+
+-- 임시 계정 생성
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID0', '1234', 'testName', '', '', '101010-2752867');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID1', '1234', 'testName', '', '', '101010-1972591');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID2', '1234', 'testName', '', '', '101010-1779653');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID3', '1234', 'testName', '', '', '101010-2343848');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID4', '1234', 'testName', '', '', '101010-1751350');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID5', '1234', 'testName', '', '', '101010-1862544');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID6', '1234', 'testName', '', '', '101010-2250180');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID7', '1234', 'testName', '', '', '101010-1173248');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID8', '1234', 'testName', '', '', '101010-1941649');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID9', '1234', 'testName', '', '', '101010-1211043');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID10', '1234', 'testName', '', '', '101011-2052179');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID11', '1234', 'testName', '', '', '101011-2448278');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID12', '1234', 'testName', '', '', '101011-2650133');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID13', '1234', 'testName', '', '', '101011-2445512');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID14', '1234', 'testName', '', '', '101011-1879713');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID15', '1234', 'testName', '', '', '101011-1621411');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID16', '1234', 'testName', '', '', '101011-1348211');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID17', '1234', 'testName', '', '', '101011-1515452');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID18', '1234', 'testName', '', '', '101011-1463462');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID19', '1234', 'testName', '', '', '101011-1549051');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID20', '1234', 'testName', '', '', '101012-1567126');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID21', '1234', 'testName', '', '', '101012-1624144');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID22', '1234', 'testName', '', '', '101012-1461274');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID23', '1234', 'testName', '', '', '101012-1167433');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID24', '1234', 'testName', '', '', '101012-1931333');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID25', '1234', 'testName', '', '', '101012-1078923');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID26', '1234', 'testName', '', '', '101012-2982932');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID27', '1234', 'testName', '', '', '101012-1364664');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID28', '1234', 'testName', '', '', '101012-2453161');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID29', '1234', 'testName', '', '', '101012-1645634');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID30', '1234', 'testName', '', '', '101013-2323746');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID31', '1234', 'testName', '', '', '101013-2455997');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID32', '1234', 'testName', '', '', '101013-1240174');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID33', '1234', 'testName', '', '', '101013-1338379');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID34', '1234', 'testName', '', '', '101013-1821454');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID35', '1234', 'testName', '', '', '101013-2917683');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID36', '1234', 'testName', '', '', '101013-1920080');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID37', '1234', 'testName', '', '', '101013-1456047');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID38', '1234', 'testName', '', '', '101013-1147329');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID39', '1234', 'testName', '', '', '101013-1284460');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID40', '1234', 'testName', '', '', '101014-2014096');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID41', '1234', 'testName', '', '', '101014-1176613');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID42', '1234', 'testName', '', '', '101014-2468532');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID43', '1234', 'testName', '', '', '101014-2748867');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID44', '1234', 'testName', '', '', '101014-1512270');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID45', '1234', 'testName', '', '', '101014-2235922');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID46', '1234', 'testName', '', '', '101014-2067099');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID47', '1234', 'testName', '', '', '101014-1329249');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID48', '1234', 'testName', '', '', '101014-1954414');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID49', '1234', 'testName', '', '', '101014-1644015');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID50', '1234', 'testName', '', '', '101015-2532977');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID51', '1234', 'testName', '', '', '101015-1066141');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID52', '1234', 'testName', '', '', '101015-1933734');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID53', '1234', 'testName', '', '', '101015-1923052');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID54', '1234', 'testName', '', '', '101015-2768414');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID55', '1234', 'testName', '', '', '101015-2185647');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID56', '1234', 'testName', '', '', '101015-2752251');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID57', '1234', 'testName', '', '', '101015-2422091');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID58', '1234', 'testName', '', '', '101015-1426841');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID59', '1234', 'testName', '', '', '101015-1230787');
+
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID60', '1234', 'testName', '', '', '101016-1414649');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID61', '1234', 'testName', '', '', '101016-1919345');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID62', '1234', 'testName', '', '', '101016-2754928');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID63', '1234', 'testName', '', '', '101016-1118247');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID64', '1234', 'testName', '', '', '101016-1565521');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID65', '1234', 'testName', '', '', '101016-2210056');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID66', '1234', 'testName', '', '', '101016-2256310');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID67', '1234', 'testName', '', '', '101016-2273890');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID68', '1234', 'testName', '', '', '101016-2649742');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID69', '1234', 'testName', '', '', '101016-2444347');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID70', '1234', 'testName', '', '', '101017-2610928');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID71', '1234', 'testName', '', '', '101017-1974789');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID72', '1234', 'testName', '', '', '101017-2466154');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID73', '1234', 'testName', '', '', '101017-2533597');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID74', '1234', 'testName', '', '', '101017-2610341');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID75', '1234', 'testName', '', '', '101017-2036771');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID76', '1234', 'testName', '', '', '101017-1041744');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID77', '1234', 'testName', '', '', '101017-1256282');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID78', '1234', 'testName', '', '', '101017-2816876');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID79', '1234', 'testName', '', '', '101017-2341849');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID80', '1234', 'testName', '', '', '101018-1071053');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID81', '1234', 'testName', '', '', '101018-2635828');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID82', '1234', 'testName', '', '', '101018-2024494');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID83', '1234', 'testName', '', '', '101018-1412732');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID84', '1234', 'testName', '', '', '101018-1213229');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID85', '1234', 'testName', '', '', '101018-1688139');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID86', '1234', 'testName', '', '', '101018-1074541');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID87', '1234', 'testName', '', '', '101018-1584757');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID88', '1234', 'testName', '', '', '101018-2727121');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID89', '1234', 'testName', '', '', '101018-2711247');
+
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID90', '1234', 'testName', '', '', '101019-1779196');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID91', '1234', 'testName', '', '', '101019-2369926');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID92', '1234', 'testName', '', '', '101019-2588773');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID93', '1234', 'testName', '', '', '101019-2473184');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID94', '1234', 'testName', '', '', '101019-1888729');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID95', '1234', 'testName', '', '', '101019-1824971');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID96', '1234', 'testName', '', '', '101019-2218151');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID97', '1234', 'testName', '', '', '101019-2539418');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID98', '1234', 'testName', '', '', '101019-2583072');
+INSERT INTO member (mem_id, mem_pw, mem_name, mem_email, mem_phone, mem_RRN) VALUES ('testID99', '1234', 'testName', '', '', '101019-2917921');
