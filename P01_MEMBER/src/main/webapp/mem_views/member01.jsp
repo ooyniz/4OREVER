@@ -1,34 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>왕인성</title>
+<title>4OREVER :: 왕인성🧔🏻‍♀️</title>
 <!-- 아이콘 -->
-<link rel="icon" type="image/x-icon" href="/P01_MEMBER/images/favicon.png" />
-<!-- style -->
-<style>
-	.box {
-	width: 450px;
-	height: 450px;
-	border-radius: 70%;
-	overflow: hidden;
-	}
-	.profile {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	}
-</style>
+<link rel="icon" type="image/x-icon"
+	href="/P01_MEMBER/images/favicon.png" />
+<!-- css -->
+<link rel="stylesheet" href="/P01_MEMBER/CSS/memberstyles.css" />
 </head>
 <body>
 	<!-- Start of header -->
 	<%@ include file="../header.jsp"%>
 	<!-- End of header -->
-<div class="box">
-<img class="profile" src="../images/member01.jpg" width="1024"/>
-</div>
+
+	<!-- 이미지 -->
+	<div>
+		<div class="box">
+			<img class="profile" src="../images/member01.jpg" width="1024" />
+		</div>
+
+	</div>
 	<!-- Start of footer -->
 	<%@ include file="../footer.jsp"%>
 	<!-- End of footer -->
