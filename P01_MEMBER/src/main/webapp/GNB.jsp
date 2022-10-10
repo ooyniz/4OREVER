@@ -40,7 +40,7 @@
 					onclick="location.href='/P01_MEMBER/mem_views/mem_edit.jsp' ">정보수정</button>
 
 				<!-- 여기에 if else넣어서 이동링크 ㄱ -->
-				<button v-if="userClass == 200 || userClass == 300" class="btn btn-outline-success m-1" type="button"
+				<button v-if="userClass == 200 || userClass == 300"
 					onclick="location.href='/P01_MEMBER/mem_views/adminPage.jsp' ">관리자페이지</button>
 			</div>
 		</div>

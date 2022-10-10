@@ -16,8 +16,7 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 </head>
-<body>
-	<h1>소개 페이지</h1>
+<body style="color: f9ecd9">
 	<hr>
 	<div id="carouselExampleIndicators" class="carousel slide"
 		data-bs-ride="carousel">
