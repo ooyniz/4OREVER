@@ -24,7 +24,6 @@
   text-decoration: none; /* 링크의 밑줄 제거 */
   color: inherit; /* 링크의 색상 제거 */
 }
-출처: https://hyunjungchoi.tistory.com/44 [행뽁🐥:티스토리]
 </style>
 </head>
 <body>
