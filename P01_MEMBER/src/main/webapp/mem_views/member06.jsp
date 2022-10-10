@@ -9,7 +9,7 @@
 <link rel="icon" type="image/x-icon"
 	href="/P01_MEMBER/images/favicon.png" />
 <!-- css -->
-<link rel = "stylesheet" href= "/P01_MEMBER/CSS/memberstyles.css"/>
+<link rel = "stylesheet" href= "/P01_MEMBER/css/memberstyles.css"/>
 </head>
 <body>
 	<!-- Start of header -->

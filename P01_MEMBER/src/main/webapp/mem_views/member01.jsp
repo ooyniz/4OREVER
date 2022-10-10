@@ -17,8 +17,11 @@
 	<!-- End of header -->
 
 	<!-- 이미지 -->
+
 	<div class="box">
-		<img class="profile" src="../images/member01.jpg" width="1024" />
+		<span> <img class="profile" src="../images/member01.jpg"
+			width="1024" />
+		</span>
 	</div>
 
 	<!-- Start of footer -->
