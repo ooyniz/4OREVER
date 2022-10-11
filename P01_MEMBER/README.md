@@ -21,6 +21,14 @@
 
 -----------------------------
 
+## view
+<img width="1281" alt="image" src="https://user-images.githubusercontent.com/102000749/194974648-f39d4631-02d2-4d86-b055-4f824170cbe8.png">
+<img width="1281" alt="image" src="https://user-images.githubusercontent.com/102000749/194974705-c8933003-fbfd-44eb-97dd-7a62153d69bc.png">
+<img width="1281" alt="image" src="https://user-images.githubusercontent.com/102000749/194974680-b0dc1869-4e6a-454a-b225-ced1896ac41c.png">
+<img width="1281" alt="image" src="https://user-images.githubusercontent.com/102000749/194974745-ddbe4b9a-3e59-494d-9584-abee6f90244e.png">
+
+
+
 ## :clipboard: 개발환경
 * JSP
 * JavaScript
@@ -60,35 +68,3 @@
 
 예시 노션)
 https://potatow.notion.site/088ce857346440fa8a2b466950309938
-
-
-<br>
-👑🧔🏻‍♀️[인성] 
-👧🏻[유진] 
-👦🏻[정수]
-👨🏻‍🦱[태권]
-🧒🏻[규태]
-🧑🏻[성혁]
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<table>
-  <tr>
-    
-<td align="center"><a href="https://github.com/tkdrms4585"><img src="src/main/webapp/images/member01.jpg" width="100px;" alt=""/><br /><sub><b>왕인성</b></sub></a><br /><a href="https://github.com/tkdrms4585" title="Code">🏠</a></td>
-    
- <td align="center"><a href="https://github.com/ooyniz"><img src="src/main/webapp/images/member02.jpg" width="100px;" alt=""/><br /><sub><b>곽유진</b></sub></a><br /><a href="https://github.com/ooyniz" title="Code">🏠</a></td>
-
- <td align="center"><a href="https://github.com/YJU-KimJeongSu"><img src="src/main/webapp/images/member03.jpg" width="100px;" alt=""/><br /><sub><b>김정수</b></sub></a><br /><a href="https://github.com/YJU-KimJeongSu" title="Code">🏠</a></td>
-    
-<td align="center"><a href="https://github.com/NoTaeGwon"><img src="src/main/webapp/images/member04.jpg" width="100px;" alt=""/><br /><sub><b>노태권</b></sub></a><br /><a href="https://github.com/NoTaeGwon" title="Code">🏠</a></td>   
-    
- <td align="center"><a href="https://github.com/cchrbxo"><img src="src/main/webapp/images/member06.jpg" width="100px;" alt=""/><br /><sub><b>조규태</b></sub></a><br /><a href="https://github.com/cchrbxo" title="Code">🏠</a></td>
-    
- <td align="center"><a href="https://github.com/thd8172"><img src="src/main/webapp/images/member05.jpg" width="100px;" alt=""/><br /><sub><b>송성혁</b></sub></a><br /><a href="https://github.com/thd8172" title="Code">🏠</a></td>
-
-</tr>
-    
- 
-</table>
