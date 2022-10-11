@@ -138,9 +138,9 @@
 					<td><%=mem_phone%></td>
 					<td><%=mem_class%></td>
 					<%
-					if (mem_class.equals("300")) {
+					if (mem_class.equals("관리자")) {
 					%>
-					
+					<td></td>
 					<%
 					} else {
 					%>
@@ -154,7 +154,13 @@
 					<%
 					}
 					%>
-					
+					<%
+					if (mem_class.equals("관리자")) {
+					%>
+					<td></td>
+					<%
+					} else {
+					%>
 					<td>
 					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm">
 						<input type="hidden" value="EDIT_ADMIN" name="actionType">
@@ -162,6 +168,9 @@
 						<input type="button" value="수정" @click="editSubmitCheck()">
 					</form>
 					</td>
+					<%
+					}
+					%>
 					<td>
 					<form action="../mem_models/member_dao.jsp" method="post" id="adminForm2">
 						<input type="hidden" value="DELETE_ADMIN" name="actionType">
