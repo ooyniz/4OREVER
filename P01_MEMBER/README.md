@@ -34,6 +34,7 @@
 * JavaScript
 * BootStrap
 * CSS
+* Vue.js
 
 
 ## :bulb: 규칙
